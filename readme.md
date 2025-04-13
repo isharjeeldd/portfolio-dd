@@ -4,7 +4,7 @@ Welcome to the source code for my personal developer portfolio! This site showca
 
 ## 🌐 Live Site
 
-👉 [Visit Portfolio](https://your-portfolio-link.com)
+👉 [Visit Portfolio](https://portfolio-dd-alpha.vercel.app/)
 
 ---
 
@@ -42,7 +42,7 @@ Welcome to the source code for my personal developer portfolio! This site showca
 Clone the repo and install dependencies.
 
 ```bash
-git clone https://github.com/yourusername/portfolio.git
+git clone https://github.com/isharjeeldd/portfolio-dd.git
 cd portfolio
-npm install
+npm install --legacy-peer-deps
 npm run dev
