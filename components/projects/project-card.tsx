@@ -52,7 +52,7 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
             rel="noopener noreferrer"
             className="bg-white text-black px-6 py-3 rounded-full font-medium hover:bg-opacity-90 transition-all"
           >
-            Go to Project
+            View Live
           </Link>
         </div>
       </div>

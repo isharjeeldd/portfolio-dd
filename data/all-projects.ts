@@ -1,61 +1,70 @@
 export const allProjectsData = [
     {
-        id: "ux-dashboard-hotel",
-        title: "User Experience Design Dashboard Hotel Management",
+        id: "onit-iot",
+        title: "ONIT IoT Control & Monitoring System",
         description:
-            "In the context of user experience (UX) design, a hotel management dashboard should be designed with the needs and goals of the hotel staff in mind. This means creating a clear and intuitive interface that allows staff to easily access and use the various tools and features of the dashboard.",
-        image: "/placeholder.svg?height=450&width=800",
-        tags: ["Design", "Research", "Presentation"],
-        liveUrl: "https://example.com/hotel-dashboard",
-        githubUrl: "https://github.com/username/hotel-dashboard",
-    },
-    {
-        id: "ux-policy-making",
-        title: "Bring of User Experience Design to Policy Making, How to Impact Society",
-        description:
-            "User experience (UX) design is a discipline that focuses on creating products and services that are easy to use, efficient, and enjoyable for users. In the context of policy making, UX design can be used to create policies that are effective.",
-        image: "/placeholder.svg?height=450&width=800",
-        tags: ["Research", "Presentation"],
-        liveUrl: "https://example.com/ux-policy",
-        githubUrl: "https://github.com/username/ux-policy",
-    },
-    {
-        id: "design-process-teams",
-        title: "Bringing Design Process to Teams, How to Solve User Problems with Data & Inclusive Collaboration",
-        description:
-            "There are many different design processes that can be followed when creating a hotel management dashboard. Here are some tips for bringing a design process to teams and using data and inclusive collaboration to solve user problems.",
-        image: "/placeholder.svg?height=600&width=800",
-        tags: ["Design", "Research", "Presentation", "Collaboration"],
-        liveUrl: "https://example.com/design-process",
-        githubUrl: "https://github.com/username/design-process",
-    },
-    {
-        id: "icon-package",
-        title: "Icon Package of Slin Icon",
-        description:
-            "An icon package is a collection of icons that can be used in various design projects, such as website design, app development, and graphic design.",
-        image: "/placeholder.svg?height=450&width=800",
-        tags: ["Design", "Branding", "Identity"],
-        liveUrl: "https://example.com/icon-package",
-        githubUrl: "https://github.com/username/icon-package",
-    },
-    {
-        id: "ux-presentations",
-        title: "UX review presentations",
-        description: "How do you create compelling presentations that wow your colleagues and impress your managers?",
-        image: "/placeholder.svg?height=450&width=800",
-        tags: ["Design", "Research", "Presentation"],
-        liveUrl: "https://example.com/ux-presentations",
-        githubUrl: "https://github.com/username/ux-presentations",
-    },
-    {
-        id: "collaborative-design",
-        title: "Collaborative Design Systems for Enterprise",
-        description:
-            "Building scalable design systems that work across multiple teams and products requires careful planning, documentation, and collaboration between designers and developers.",
-        image: "/placeholder.svg?height=450&width=800",
+            "Developed ERP and control modules for ONIT’s IoT system using React Class Components and TypeScript. Integrated GraphDB (Ontotext) and MongoDB for complex data modeling and real-time monitoring workflows.",
+        image: "/projects/onit.png",
         tags: ["Design", "Research", "Collaboration"],
-        liveUrl: "https://example.com/design-systems",
-        githubUrl: "https://github.com/username/design-systems",
+        liveUrl: "https://accounts.onitnetwork.com/#ONIT",
+        // githubUrl: "https://github.com/isharjeeldd/onit-iot-system",
     },
-]
+    {
+        id: "synerge-freelancer-platform",
+        title: "Synerge Freelancer Platform",
+        description:
+            "Contributed to a freelancer hiring platform by developing client-facing interfaces using Functional React Components. Employed Material UI for a polished frontend and Redux for effective global state management.",
+        image: "/projects/synerge.png",
+        tags: ["Design", "Collaboration", "Research"],
+        liveUrl: "https://app.synerge.io/auth/client-landing-page",
+        // githubUrl: "https://github.com/isharjeeldd/synerge-platform",
+    },
+    {
+        id: "alara-enterprise-ai",
+        title: "Alara Enterprise AI Agent System",
+        description:
+            "Built key modules for Alara’s AI agent-driven automation system that introduces autonomous reasoning to enterprise workflows. Implemented secure login, real-time dashboards, and task control flows.",
+        image: "/projects/alara.png",
+        tags: ["Design", "AI", "Presentation"],
+        liveUrl: "https://alara-agents-dev.vercel.app/sign-in",
+        githubUrl: "https://github.com/issmai/alara-ui",
+    },
+    {
+        id: "digital-eye-ai",
+        title: "Digital Eye AI Surveillance",
+        description:
+            "Developed the frontend for Digital Eye’s AI-powered surveillance platform. Designed intelligent video feed monitoring using modern UI components and a secure auth-based dashboard interface.",
+        image: "/projects/digital-eye.png",
+        tags: ["AI", "Design", "Presentation"],
+        liveUrl: "https://digital-eye-dashboard-ui.vercel.app/sign-in",
+        githubUrl: "https://github.com/issmai/digital-eye-ui",
+    },
+    {
+        id: "wai-industries-site",
+        title: "wAI Industries Website",
+        description:
+            "Designed and developed the official website for wAI Industries, an AI-focused consulting and product development firm. Features a bold layout, service breakdowns, and performance-focused delivery.",
+        image: "/projects/wai.png",
+        tags: ["Design", "Branding", "Identity"],
+        liveUrl: "https://www.waiindustries.com",
+        githubUrl: "https://github.com/issmai/wai-ui",
+    },
+    {
+        id: "synergy-primary-clinic",
+        title: "Synergy Primary Clinic Website",
+        description:
+            "Built the digital presence for Synergy Primary Clinic using Gatsby and Tailwind CSS. The site is fully responsive and focused on patient access, appointment flow, and service presentation.",
+        image: "/projects/synergy.png",
+        tags: ["Design", "Branding", "Presentation"],
+        liveUrl: "https://www.synergyprimaryclinic.com/",
+    },
+    {
+        id: "parma-family-dental",
+        title: "Parma Family Dental Center",
+        description:
+            "Developed a clean and professional website for Parma Family Dental using Gatsby with Tailwind CSS. Focused on ease of navigation and clarity for local patients seeking dental services.",
+        image: "/projects/parma.png",
+        tags: ["Design", "Identity", "Presentation"],
+        liveUrl: "https://parmafamilydentalcenter.com/",
+    },
+];

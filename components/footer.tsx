@@ -62,7 +62,7 @@ export function Footer() {
               <ul className="space-y-2 text-sm">
                 {['Home', 'About', 'Blogs'].map((item) => (
                   <li key={item}>
-                    <Link href={`/${item.toLowerCase()}`} className="text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-gray-100 transition-colors">
+                    <Link href={`/${item === "Home" ? "/" : item.toLowerCase()}`} className="text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-gray-100 transition-colors">
                       {item}
                     </Link>
                   </li>

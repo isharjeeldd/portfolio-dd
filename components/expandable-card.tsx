@@ -54,10 +54,10 @@ export function ExpandableCard() {
 
   const tagColors: Record<string, string> = {
     Design: "bg-[#DBEAFE] text-[#1E40AF] dark:bg-[#1E40AF]/20 dark:text-[#93C5FD]",
-    Research: "bg-[#FCE7F3] text-[#9D174D] dark:bg-[#9D174D]/20 dark:text-[#F9A8D4]",
+    RealEstate: "bg-[#FCE7F3] text-[#9D174D] dark:bg-[#9D174D]/20 dark:text-[#F9A8D4]",
     Presentation: "bg-[#EDE9FE] text-[#5B21B6] dark:bg-[#5B21B6]/20 dark:text-[#C4B5FD]",
-    Collaboration: "bg-[#DCFCE7] text-[#166534] dark:bg-[#166534]/20 dark:text-[#86EFAC]",
-    Branding: "bg-[#E5E7EB] text-[#1F2937] dark:bg-[#1F2937]/20 dark:text-[#9CA3AF]",
+    Development: "bg-[#DCFCE7] text-[#166534] dark:bg-[#166534]/20 dark:text-[#86EFAC]",
+    DevOps: "bg-[#E5E7EB] text-[#1F2937] dark:bg-[#1F2937]/20 dark:text-[#9CA3AF]",
     Identity: "bg-[#DBEAFE] text-[#1E40AF] dark:bg-[#1E40AF]/20 dark:text-[#93C5FD]",
   }
 
@@ -130,7 +130,7 @@ export function ExpandableCard() {
                   </div>
 
                   <Button variant={"secondary"} className="rounded-full">
-                    <Link href={active.rerouteLink} className="font-medium">
+                    <Link href={active.rerouteLink} target="_blank" className="font-medium">
                       {active.rerouteText}
                     </Link>
                   </Button>
@@ -145,6 +145,16 @@ export function ExpandableCard() {
                   >
                     {active.content}
                   </motion.div>
+                  <div className="flex flex-wrap gap-2 pb-4">
+                    {active.tags.map((tag) => (
+                      <span
+                        key={tag}
+                        className={cn("text-xs font-medium px-3 py-1 rounded-full", tagColors[tag] || "bg-gray-800 text-gray-300")}
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
                 </div>
               </div>
             </motion.div>
@@ -167,13 +177,13 @@ export function ExpandableCard() {
             variants={itemVariants}
           >
             <div className="flex gap-4 flex-col w-full">
-              <motion.div className="h-72 overflow-hidden rounded-lg" layoutId={`image-${card.title}-${id}`}>
+              <motion.div className="h-fit overflow-hidden rounded-lg" layoutId={`image-${card.title}-${id}`}>
                 <Image
                   width={100}
                   height={150}
                   src={card.image}
                   alt={card.title}
-                  className="h-72 w-full rounded-lg object-cover object-top filter grayscale hover:grayscale-0 hover:scale-105 transition-all"
+                  className="h-fit w-full rounded-lg object-cover object-top filter grayscale hover:grayscale-0 hover:scale-105 transition-all"
                 />
               </motion.div>
 
@@ -243,35 +253,38 @@ export const CloseIcon = () => {
 const projects = [
   {
     id: 1,
-    tags: ["Design", "Research", "Presentation"],
-    title: "E-commerce Platform",
-    description: "A full-stack e-commerce solution with real-time inventory management.",
-    image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&q=80&w=600&h=400",
-    slug: "e-commerce-platform",
-    rerouteText: "View Project",
-    rerouteLink: "/projects/e-commerce-platform",
-    content: "This e-commerce platform was built using React for the frontend and Node.js with Express for the backend. It features real-time inventory management, secure payment processing, and a responsive design for optimal user experience across all devices."
+    tags: ["Design", "Development", "DevOps"],
+    title: "PolyX Enterprise Suite",
+    description: "A modular enterprise platform with microservices for auth, logging, notifications, and API testing.",
+    image: "/projects/poly-x.png",
+    slug: "polyx-enterprise-suite",
+    rerouteText: "View live project",
+    rerouteLink: "https://poly-x-alpha.vercel.app/sign-in",
+    content:
+      "PolyX is a full-stack microservices-based platform designed for enterprise use cases. Built using Node.js, Express, MongoDB, and Next.js, it features services for authentication, alerting, logging, and API testing. The frontend integrates Framer Motion, Zustand, and ShadCN to deliver a modular and animated experience, while backend services are containerized using Docker for deployment flexibility.",
   },
   {
     id: 2,
-    tags: ["Research", "Presentation"],
-    title: "Task Management App",
-    description: "A React-based task management application with a Node.js backend.",
-    image: "https://images.unsplash.com/photo-1540350394557-8d14678e7f91?auto=format&fit=crop&q=80&w=600&h=400",
-    rerouteLink: "/projects/e-commerce-platform",
-    rerouteText: "View Project",
-    slug: "task-management-app",
-    content: "This task management app allows users to create, assign, and track tasks in real-time. It uses React with Redux for state management on the frontend and Node.js with MongoDB on the backend. The app includes features like drag-and-drop task organization and team collaboration tools."
+    tags: ["Research", "Interface", "RealEstate"],
+    title: "Hallocasa Global Platform",
+    description: "A real estate platform connecting international brokers and property listings across borders.",
+    image: "/projects/hallocasa.png",
+    rerouteLink: "https://hallocasa.com/properties?lang=en-US&curr=USD",
+    rerouteText: "View live project",
+    slug: "hallocasa-global-platform",
+    content:
+      "Hallocasa is a cross-border property tech solution supporting multi-language and multi-currency real estate listings. Built with Next.js 12, Tailwind CSS, SCSS, Redux Toolkit, and Material UI, the platform features robust broker filtering, responsive design, and global search tools. It enables agents and buyers to engage easily from anywhere in the world.",
   },
   {
     id: 3,
-    tags: ["Design"],
-    title: "Weather Forecast Dashboard",
-    description: "A dynamic weather dashboard using OpenWeatherMap API and Chart.js.",
-    image: "https://images.unsplash.com/photo-1592210454359-9043f067919b?auto=format&fit=crop&q=80&w=600&h=400",
-    rerouteLink: "/projects/e-commerce-platform",
-    rerouteText: "View Project",
-    slug: "weather-forecast-dashboard",
-    content: "This weather forecast dashboard provides users with up-to-date weather information and forecasts. It integrates the OpenWeatherMap API for data and uses Chart.js to visualize temperature trends, precipitation chances, and other meteorological data. The dashboard is built with React and features a clean, intuitive interface."
+    tags: ["Design", "AI", "Development"],
+    title: "wAI Industries Website",
+    description: "Corporate site for an AI consultancy, built to showcase custom solutions and innovations.",
+    image: "/projects/wai.png",
+    rerouteLink: "https://www.waiindustries.com/",
+    rerouteText: "View live project",
+    slug: "wai-industries-website",
+    content:
+      "wAI Industries is a tech consultancy specializing in artificial intelligence applications. The website was designed with a bold, minimal aesthetic using Next.js, TypeScript, Tailwind CSS, and Framer Motion. It presents the company’s mission, service areas, and expertise in deploying generative AI solutions across different verticals.",
   },
 ]

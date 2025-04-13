@@ -1,6 +1,6 @@
 'use client'
 
-import { Facebook, Github, Instagram, Linkedin, Twitter } from 'lucide-react'
+import { Facebook, Github, Instagram, Linkedin } from 'lucide-react'
 import Link from "next/link"
 import { motion } from "framer-motion"
 import { headingCss, initialSectionCss, paragraphCss } from '@/constants'
@@ -32,27 +32,22 @@ export default function Hero() {
     {
       name: "GitHub",
       icon: Github,
-      href: "https://github.com/yourusername",
+      href: "https://github.com/isharjeeldd",
     },
     {
       name: "LinkedIn",
       icon: Linkedin,
-      href: "https://linkedin.com/in/yourusername",
+      href: "https://www.linkedin.com/in/muhammad-sharjeel-254a48108/",
     },
     {
       name: "Instagram",
       icon: Instagram, // Custom icon
-      href: "https://instagram.com/yourusername",
+      href: "https://www.instagram.com/i.sharjeelafzaal/",
     },
     {
       name: "Facebook",
       icon: Facebook, // Custom icon
-      href: "https://facebook.com/yourusername",
-    },
-    {
-      name: "Twitter",
-      icon: Twitter, // Custom icon
-      href: "https://twitter.com/yourusername",
+      href: "https://www.facebook.com/i.sharjeelafzaal/",
     },
   ];
 

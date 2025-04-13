@@ -3,7 +3,6 @@ import { About } from '@/components/about'
 import RecentProjects from '@/components/recent-projects'
 import RecentBlogs from "@/components/blog/recent-blogs"
 import { blogPosts } from "@/data/blog-data"
-import BgGradient from "@/components/bg-gradient"
 
 export default function Home() {
   const recentBlogs = blogPosts.slice(0, 3);

@@ -5,7 +5,6 @@ import './globals.css'
 import Layout from '@/components/layout'
 import { TooltipProvider } from '@/components/ui/tooltip'
 import { Toaster } from '@/components/ui/toaster'
-import BgGradient from '@/components/bg-gradient'
 
 const poppins = Poppins({
   subsets: ['latin'],
@@ -13,11 +12,6 @@ const poppins = Poppins({
   variable: '--font-poppins',
   display: 'swap',
 })
-
-// export const metadata: Metadata = {
-//   title: 'Home - Muhammad Sharjeel',
-//   description: 'Personal portfolio and blog',
-// }
 
 export const metadata: Metadata = {
   metadataBase: new URL(

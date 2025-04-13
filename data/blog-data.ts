@@ -1,578 +1,615 @@
 import { BlogPost } from "@/types/blogs"
 
 export const blogPosts: BlogPost[] = [
-    {
-        id: "1",
-        title:
-            "UX review presentations: How to create compelling presentations that wow your colleagues and impress your managers",
-        slug: "ux-review-presentations",
-        author: "Olivia Rhye",
-        date: "2023-01-01",
-        excerpt:
-            "Learn how to create compelling UX review presentations that wow your colleagues and impress your managers. Discover key strategies for clear communication, visual storytelling, and strategic thinking.",
-        content: `
-      <h2>The Art of UX Review Presentations</h2>
-      <p>Creating compelling UX review presentations is an art that combines clear communication, visual storytelling, and strategic thinking. Here are some key strategies to make your presentations stand out:</p>
-      
-      <h3>Start with a Clear Structure</h3>
-      <p>Begin with an overview of what you'll cover, then dive into the details. A good structure might include:</p>
+  // Blog 1: My New Blog
+  {
+    id: "da8d010d-4a72-4ac5-9dbc-e657563352c4",
+    title: "Launching My New Portfolio Website",
+    slug: "launching-my-new-portfolio-website",
+    author: "Muhammad Sharjeel",
+    date: "2025-04-13",
+    excerpt:
+      "I'm thrilled to launch my new portfolio website — a blend of design precision and development finesse. Here's a breakdown of the technologies used, design choices made, and the philosophy behind the build.",
+    content: `
+      <br/>
+      <h2>Why a New Portfolio?</h2>
+      <p>As a full-stack developer, your personal website should be a reflection of your evolving craft. My old portfolio no longer represented my capabilities, so I decided to rebuild from the ground up — with speed, accessibility, and aesthetic balance at its core.</p>
+
+      <h2>Tech Stack Breakdown</h2>
+      <p>This version is built using a modern frontend stack that allows rapid iteration, excellent performance, and delightful developer experience:</p>
       <ul>
-        <li>Problem statement and research goals</li>
-        <li>Methodology and participants</li>
-        <li>Key findings and insights</li>
-        <li>Recommendations and next steps</li>
+        <li><strong>Next.js 15</strong> – The foundation of the site, utilizing the App Router for structure and performance.</li>
+        <li><strong>ShadCN UI</strong> – For accessible, headless UI components styled with Tailwind.</li>
+        <li><strong>Aceternity UI</strong> – Used for micro-interactions and unique, prebuilt design elements.</li>
+        <li><strong>Tailwind CSS</strong> – Enables utility-first styling with full design control.</li>
+        <li><strong>Framer Motion</strong> – Adds smooth transitions and animations that elevate the user experience.</li>
       </ul>
-      
-      <h3>Use Visual Evidence</h3>
-      <p>Show, don't just tell. Include screenshots, user flows, and video clips of user testing sessions to bring your points to life. Visual evidence makes your arguments more compelling and helps stakeholders understand user pain points.</p>
-      
-      <h3>Tell a Story</h3>
-      <p>Frame your presentation as a narrative. Start with the user's journey, highlight the challenges they face, and show how your proposed solutions will improve their experience. Stories are memorable and help create emotional connections with your audience.</p>
-      
-      <h3>Focus on Impact</h3>
-      <p>Always tie your findings back to business goals and metrics. Whether it's increased conversion rates, reduced support tickets, or improved user satisfaction scores, make the business case for your recommendations clear.</p>
-      
-      <h3>Keep it Concise</h3>
-      <p>Respect your audience's time by being selective about what you include. Focus on the most important insights and recommendations rather than sharing every detail of your research.</p>
-    `,
-        coverImage: "/placeholder.svg?height=600&width=800",
-        categories: ["Design", "Research", "Presentation"],
-    },
-    {
-        id: "2",
-        title: "Migrating to Linear 101",
-        slug: "migrating-to-linear-101",
-        author: "Phoenix Baker",
-        date: "1 Jan 2023",
-        excerpt: "Linear helps streamline software projects, sprints, tasks, and bug tracking. Here's how to get...",
-        content: `
-      <p>Migrating your team's workflow to Linear can significantly improve productivity and project visibility. This guide will walk you through the essential steps to make the transition smooth and successful.</p>
-      
-      <h2>Why Linear?</h2>
-      <p>Before diving into the migration process, it's worth understanding what makes Linear different:</p>
+
+      <h2>Design Principles</h2>
+      <p>I followed a minimalist, content-first design language with a focus on:</p>
       <ul>
-        <li>Speed and performance: Linear is built for speed with keyboard shortcuts and instant updates</li>
-        <li>Streamlined interface: Minimal design reduces distractions</li>
-        <li>Integrated roadmaps: Visualize project timelines and dependencies</li>
-        <li>Automation: Reduce manual work with smart workflows</li>
+        <li>Typography and spacing to improve readability.</li>
+        <li>Dark mode as the default for a sleek look.</li>
+        <li>Centralized content in the hero section, shifting to left-aligned grids in blogs and projects for usability.</li>
       </ul>
-      
-      <h2>Preparation Phase</h2>
-      <p>Before migrating, take time to:</p>
+
+      <h2>Developer Experience (DX)</h2>
+      <p>From a coding perspective, everything is optimized for maintainability:</p>
+      <ul>
+        <li>Folder structure is modular, aligned with App Router conventions.</li>
+        <li>All components are reusable and wrapped in Radix primitives where necessary.</li>
+        <li>Used <code>clsx</code> and <code>tailwind-merge</code> for safe, dynamic class merging.</li>
+      </ul>
+
+      <h2>GitHub Repository</h2>
+<p>The source code for this portfolio is fully open-source and available here:</p>
+<p><a href="https://github.com/isharjeeldd/portfolio-dd" target="_blank" rel="noopener noreferrer">🔗 github.com/isharjeeldd/portfolio-dd</a></p>
+
+
+      <h2>What’s Next?</h2>
+      <p>This site isn't just static — it's growing. Future additions will include:</p>
+      <ul>
+        <li>Dynamic blogs powered by MDX.</li>
+        <li>Project walkthroughs with interactive demos.</li>
+        <li>Developer notes and design insights from real-world builds.</li>
+      </ul>
+
+      <h2>Fork, Learn, Build</h2>
+      <p>This project is licensed under the GNU GPL, which means you're free to fork, modify, and share. Just make sure your derivative works follow the same license terms.</p>
+      <p><em>If you find something valuable in this portfolio, feel free to star, fork, or reach out — I’d love to see how you build on it.</em></p>
+          `,
+    coverImage: "/blogs/portfolio-blog.png",
+    categories: ["Design", "Frameworks", "Software Development", "Tools"],
+  },
+  // Blog 2: Getting Started with Next.js
+  {
+    id: "1ba3cea4-06a9-48e4-81f4-aef1bff6ea5c",
+    title: "Getting Started with Next.js: Structure, Tips & Deployment",
+    slug: "getting-started-with-nextjs",
+    author: "Muhammad Sharjeel",
+    date: "2025-04-13",
+    excerpt:
+      "A developer-friendly introduction to Next.js — learn how to scaffold projects, understand folder structure, configure features, and deploy to Vercel seamlessly.",
+    content: `
+    <br/>
+      <h2>What is Next.js?</h2>
+      <p>Next.js is a powerful React-based framework that enables developers to build fast, SEO-friendly web applications with minimal setup. Whether you're building a static marketing page, a full-stack SaaS product, or a blog — Next.js handles routing, rendering modes, and performance out of the box.</p>
+
+      <h2>Why Choose Next.js?</h2>
+      <ul>
+        <li><strong>File-based routing:</strong> No need for React Router. Just drop a file in <code>/app</code> or <code>/pages</code> and it becomes a route.</li>
+        <li><strong>Server-side rendering & static generation:</strong> Easily switch between SSR, SSG, or client-side rendering.</li>
+        <li><strong>Built-in API routes:</strong> Create full-stack apps without needing a separate backend.</li>
+        <li><strong>Seamless Vercel deployment:</strong> Optimized for Vercel hosting.</li>
+      </ul>
+
+      <hr />
+
+      <h2>Project Setup</h2>
+      <p>Let’s create a new Next.js app using the App Router approach (recommended in Next.js 13+).</p>
+
+      <pre><code>npx create-next-app@latest my-nextjs-app --experimental-app</code></pre>
+
+      <p>After the CLI prompts, your project will be initialized with the following folder structure:</p>
+
+      <h3>Project Structure Overview</h3>
+      <pre><code>.
+      ├── app/                // App Router entrypoint
+      │   ├── layout.tsx      // Root layout (wrapping component)
+      │   ├── page.tsx        // Homepage ("/")
+      │   └── (routes)/       // Sub-routes as directories
+      ├── components/         // Shared UI components
+      ├── public/             // Static assets (e.g. images, fonts)
+      ├── styles/             // Tailwind/global styles
+      ├── lib/                // Utilities, helper functions
+      ├── .env.local          // Environment variables
+      ├── tailwind.config.ts  // Tailwind configuration
+      ├── next.config.js      // Framework-level config
+      └── package.json
+      </code></pre>
+
+      <p>This modular layout promotes separation of concerns and scalability.</p>
+
+      <hr />
+
+      <h2>Adding Tailwind CSS</h2>
+      <p>Tailwind helps you build modern UIs rapidly. To install it:</p>
+
+      <pre><code>npm install -D tailwindcss postcss autoprefixer
+      npx tailwindcss init -p</code></pre>
+
+      <p>Update your <code>tailwind.config.ts</code> to include:</p>
+
+      <pre><code>content: ["./app/**/*.{js,ts,jsx,tsx}", "./components/**/*.{js,ts,jsx,tsx}"]</code></pre>
+
+      <p>And in your global CSS file (usually <code>globals.css</code>):</p>
+
+      <pre><code>@tailwind base;
+      @tailwind components;
+      @tailwind utilities;
+      </code></pre>
+
+      <hr />
+
+      <h2>Routing with the App Router</h2>
+      <p>Next.js App Router introduces nested layouts, dynamic routing, and server components by default.</p>
+
+      <h4>Create a route:</h4>
+      <pre><code>// app/about/page.tsx
+      export default function AboutPage() {
+        return &lt;h1&gt;About Me&lt;/h1&gt;
+      }</code></pre>
+
+      <p>This will now be available at <code>/about</code>.</p>
+
+      <h4>Nested Layouts:</h4>
+      <pre><code>// app/dashboard/layout.tsx
+      export default function DashboardLayout({ children }) {
+        return (
+          &lt;div&gt;
+            &lt;Sidebar /&gt;
+            {children}
+          &lt;/div&gt;
+        )
+      }</code></pre>
+
+      <p>This layout wraps all routes under <code>/dashboard</code>.</p>
+
+      <hr />
+
+      <h2>Environment Configuration</h2>
+      <p>Create a <code>.env.local</code> file in your root for environment-specific settings:</p>
+
+      <pre><code>
+      NEXT_PUBLIC_API_BASE_URL=https://api.example.com
+      NEXT_PUBLIC_ENV=development
+      </code></pre>
+
+      <p>Access these with <code>process.env.NEXT_PUBLIC_*</code> in your codebase.</p>
+
+      <hr />
+
+      <h2>Useful Libraries to Add</h2>
+      <ul>
+        <li><strong>clsx / tailwind-merge</strong> – Handle conditional classNames.</li>
+        <li><strong>shadcn/ui</strong> – Prebuilt headless UI components with Tailwind.</li>
+        <li><strong>framer-motion</strong> – For page transitions and motion effects.</li>
+        <li><strong>zod</strong> – For schema validation in forms or APIs.</li>
+      </ul>
+
+      <hr />
+
+      <h2>Deploying to Vercel (Free Hosting)</h2>
       <ol>
-        <li>Audit your current project management system</li>
-        <li>Define your team structure and workflows</li>
-        <li>Clean up and prioritize existing issues</li>
-        <li>Plan your workspace organization</li>
+        <li>Push your code to GitHub.</li>
+        <li>Go to <a href="https://vercel.com" target="_blank">vercel.com</a> and sign in.</li>
+        <li>Click <strong>“New Project”</strong> and import your GitHub repo.</li>
+        <li>Vercel auto-detects the framework and deploys your app instantly.</li>
       </ol>
-      
-      <h2>Setting Up Your Linear Workspace</h2>
-      <p>Start by configuring your workspace to match your team's needs:</p>
+
+      <p>Bonus: You get previews on every commit and custom domains. You can also add environment variables from the Vercel dashboard.</p>
+
+      <hr />
+
+      <h2>Final Thoughts</h2>
+      <p>Next.js offers a scalable foundation whether you're just starting out or building enterprise-level applications. Understanding the project structure and deployment process will help you ship better, faster.</p>
+
+      <p>If you're new to the ecosystem, start small — build a portfolio, a blog, or a dashboard UI. The tooling is designed to grow with you.</p>
+
+      <h2>Useful Links</h2>
       <ul>
-        <li>Create teams based on your organizational structure</li>
-        <li>Set up projects to organize work</li>
-        <li>Configure custom states and priorities</li>
-        <li>Define issue templates for consistency</li>
+        <li><a href="https://nextjs.org/docs" target="_blank">Next.js Docs</a></li>
+        <li><a href="https://vercel.com/docs" target="_blank">Vercel Deployment Guide</a></li>
+        <li><a href="https://tailwindcss.com/docs" target="_blank">Tailwind CSS</a></li>
       </ul>
+      `,
+    coverImage: "/blogs/nextjs.png",
+    categories: ["Frameworks", "Software Development", "Tools"],
+  },
+
+  // Blog 3: AI Developer - Threat or Stunt?
+  {
+    id: "419a2d55-6193-4afd-8e6d-e5a680e2ed74",
+    title: "Is the ‘AI Developer’ a Threat to Jobs – or a Marketing Stunt?",
+    slug: "ai-developer-threat-or-stunt",
+    author: "Muhammad Sharjeel",
+    date: "2025-04-13",
+    excerpt:
+      "AI dev tools are booming — but are they replacing developers or just reshaping workflows? Here's the balanced view.",
+    content: `
+    <br/>
+    <h2>The Fear Around AI Developers</h2>
+    <p>With the rapid rise of tools like GitHub Copilot, ChatGPT, and even auto-code generation platforms, a question echoes across tech circles: <strong>Will AI take over developer jobs?</strong> The concern is valid. We've seen similar patterns in other industries — automation replacing factory workers, self-service kiosks reshaping retail, and now AI touching the once "untouchable" realm of software development.</p>
+
+    <p>Headlines exaggerate this fear with phrases like “AI writing code faster than humans” or “One AI developer equals 10 engineers.” While attention-grabbing, these claims oversimplify a complex reality.</p>
+
+    <h2>The Reality: Amplification, Not Replacement</h2>
+    <p>AI is best viewed as a tool — a <em>very smart assistant</em>. It doesn't create from scratch with deep understanding. It recognizes patterns, suggests snippets, and helps speed up repetitive tasks. But creativity, problem-solving, architecture decisions, and debugging nuance? These still belong to human developers.</p>
+
+    <p>Tools like Copilot are trained on existing codebases. That means they're great at reproducing known patterns, but lack contextual insight about a project’s unique goals or constraints. They can't ask, "Should we optimize for performance or maintainability?" — a decision only a human can make based on business logic, team capacity, or user needs.</p>
+
+    <h2>The Shift in Developer Roles</h2>
+    <p>Instead of replacing developers, AI is shifting what it means to be a developer. Here’s how:</p>
+    <ul>
+      <li><strong>Less manual repetition:</strong> Tasks like writing CRUD operations or basic component scaffolding can be partially automated.</li>
+      <li><strong>More emphasis on system design:</strong> Developers now spend more time on higher-order thinking — architecture, user experience, security models.</li>
+      <li><strong>Rise of prompt engineering:</strong> A new skill is emerging — how well you can instruct AI matters just as much as how well you can write code.</li>
+    </ul>
+
+    <p>In short, AI is shifting the <em>center of gravity</em> of a developer’s responsibilities, not eliminating the role altogether.</p>
+
+    <h2>What This Means for Junior Developers</h2>
+    <p>This is where most of the fear stems from. Junior roles often involve boilerplate code, documentation, and simple debugging — tasks that AI is increasingly good at. So where does that leave entry-level talent?</p>
+
+    <p>While some responsibilities may shrink, new ones will emerge:</p>
+    <ul>
+      <li><strong>Code reviewers and testers:</strong> AI-generated code still needs human validation.</li>
+      <li><strong>AI-tool operators:</strong> Understanding how to correctly use AI tools will be a key differentiator.</li>
+      <li><strong>Interface and system thinkers:</strong> Roles that bridge UX and logic will gain more value.</li>
+    </ul>
+
+    <p>Just like calculators didn’t remove the need for mathematicians — AI won’t remove the need for developers. It just raises the bar for value creation.</p>
+
+    <h2>The Marketing Layer</h2>
+    <p>“AI Developer” is also a shiny new marketing term. Startups brand themselves as being run by AI to attract funding. Enterprises push AI-native tooling to seem forward-thinking. But behind most AI developer products are still teams of traditional software engineers refining the AI’s boundaries, fixing bugs, and ensuring reliability.</p>
+
+    <p>It’s important to understand that much of the “AI dev” narrative is hype-driven. Most current AI tooling is still in co-pilot mode, not auto-pilot. The tech is impressive — but it's not magic.</p>
+
+    <h2Final Thoughts</h2>
+    <p>AI in development is not a threat — it’s a catalyst. It pushes us to evolve faster. Instead of memorizing syntax, we’ll optimize workflows. Instead of repeating known patterns, we’ll engineer smarter systems. And while some job roles may shift or fade, new ones will undoubtedly emerge.</p>
+
+    <p>So is the “AI Developer” a threat to jobs? No. It’s more of a <strong>mirror</strong> — reflecting back to us which parts of our role are mechanical and which are irreplaceably human.</p>
+
+    <p>Embrace the tools. Learn their limits. And then build beyond them.</p>
+      `,
+    coverImage: "/blogs/ai-dev.png",
+    categories: ["AI", "Software Development", "Opinion"],
+  },
+
+  // Blog 4: Using Generative AI to Speed Up Processes
+  {
+    id: "70970440-7088-4d51-a03e-35c6403d2f3d",
+    title: "Using Generative AI to Speed Up Creative and Dev Workflows",
+    slug: "using-generative-ai-to-speed-up",
+    author: "Muhammad Sharjeel",
+    date: "2025-04-13",
+    excerpt:
+      "From ChatGPT to v0.dev — here's how generative AI helps streamline UI design, prototyping, coding, and problem-solving in modern workflows.",
+    content: `
+    <br/>
+    <h2>The Rise of Generative AI in Development</h2>
+    <p>Generative AI has gone from a buzzword to a practical tool in everyday development and design workflows. It’s no longer about writing entire applications for you — it’s about <strong>accelerating the thinking and building process</strong>. As a developer and designer, I’ve experimented with several tools and found real value in the ones that help reduce friction in early-stage ideation, layout planning, and prototyping.</p>
+
+    <h2>Tools I Use Regularly</h2>
+    <p>Two tools in particular have become part of my creative workflow:</p>
+
+    <h3>v0.dev</h3>
+    <p>Created by the team behind Vercel, <a href="https://v0.dev" target="_blank">v0.dev</a> is a generative UI tool that turns prompts into Tailwind-based React components. You can describe a layout — like “a hero section with a CTA and three feature cards” — and v0 will scaffold a fully functional component for you. It’s an excellent starting point, especially when you're battling a blank screen or short on time.</p>
+
+    <h3>ChatGPT</h3>
+    <p>From brainstorming component structures to explaining unfamiliar error messages, ChatGPT is now an extension of my IDE. It’s incredibly useful for:</p>
+    <ul>
+      <li>Scaffolding component boilerplate</li>
+      <li>Generating regex or edge-case functions</li>
+      <li>Quickly understanding libraries or methods</li>
+      <li>Generating design content like placeholder copy or accessibility guidelines</li>
+    </ul>
+
+    <h2>When and Where to Use AI</h2>
+    <p>AI is most powerful when used for <strong>support tasks</strong>. These include:</p>
+    <ul>
+      <li>Generating boilerplate code (forms, layouts, validation schemas)</li>
+      <li>Inspiration for UI layouts or empty states</li>
+      <li>Creating first drafts of copy or documentation</li>
+      <li>Brainstorming multiple approaches to a feature</li>
+    </ul>
+
+    <p>However, AI tools should not be blindly trusted for production-level decisions or complex system architecture. That still requires experience, domain knowledge, and thoughtful consideration.</p>
+
+    <h2>Benefits of Generative AI in Dev Workflows</h2>
+    <p>Here are the advantages I’ve experienced when integrating AI tools into my design and development process:</p>
+
+    <ul>
+      <li><strong>Speed:</strong> What used to take 30 minutes of structuring now takes 5.</li>
+      <li><strong>Unblocking:</strong> AI helps you push through creative or cognitive stalls.</li>
+      <li><strong>Accessibility:</strong> Non-designers or non-devs can now prototype or experiment with ideas more easily.</li>
+    </ul>
+
+    <h2>Limitations and Trade-offs</h2>
+    <p>While helpful, generative AI still comes with caveats:</p>
+
+    <ul>
+      <li><strong>Overconfidence:</strong> AI may suggest broken or non-performant code that <em>looks</em> correct.</li>
+      <li><strong>Surface-level reasoning:</strong> It doesn’t understand business context or long-term implications.</li>
+      <li><strong>Creativity gap:</strong> Outputs may be derivative of existing patterns — not groundbreaking.</li>
+      <li><strong>Ownership:</strong> Licensing and copyright of AI-generated content can be legally ambiguous.</li>
+    </ul>
+
+    <h2>How I Combine Both Worlds</h2>
+    <p>I typically start with a generative tool to scaffold the structure — whether it’s a UI layout or a code snippet. Then I manually refine the logic, design decisions, and accessibility layer. This hybrid approach keeps me productive without compromising quality or creativity.</p>
+
+    <h2>Final Thoughts</h2>
+    <p>Generative AI isn’t here to replace developers or designers. It’s here to <strong>augment the creative process</strong>. Think of it as your brainstorming partner — fast, non-judgmental, and always available. But like any tool, its real value lies in <em>how</em> you use it, and whether you know when to stop relying on it and trust your own instincts instead.</p>
+
+    <p>If you're not experimenting with these tools yet, you're missing out on a productivity boost — not because AI is perfect, but because it's good enough to help you move faster without losing control.</p>
+      `,
+    coverImage: "/blogs/generative-ai.jpg",
+    categories: ["AI", "Tools", "Productivity"],
+  },
+
+  // Blog 5: Docker + NGINX for Microservices
+  {
+    id: "2183cfd0-343f-4420-8fcc-a6a0dc17c73b",
+    title: "Using Docker & NGINX to Build a Suite of Microservices",
+    slug: "docker-nginx-microservices",
+    author: "Muhammad Sharjeel",
+    date: "2025-04-13",
+    excerpt:
+      "Explore how to use Docker and NGINX to containerize and orchestrate a scalable microservices suite. Includes setup tips, architecture advice, and real-world tradeoffs.",
+    content: `
+    <br/>
+    <h2>Why Microservices?</h2>
+    <p>Modern applications are increasingly being built using a microservices architecture, where independent services communicate through APIs. This makes them more scalable, maintainable, and deployable. But managing those services locally and in production can be a nightmare without proper tooling.</p>
+
+    <p>This is where <strong>Docker</strong> and <strong>NGINX</strong> step in. Docker helps you containerize each service, while NGINX can be used as a reverse proxy to route incoming requests appropriately. Together, they provide a lightweight and flexible setup for building your own service-based architecture.</p>
+
+    <h2>Setting Up the Project</h2>
+    <p>Let’s say you’re building two separate microservices: <code>service-a</code> and <code>service-b</code>. Each runs independently, and we use NGINX to unify them under one domain.</p>
+
+    <h3>Project Structure</h3>
+    <pre><code>
+    ├── service-a/
+    │   ├── Dockerfile
+    │   └── ...
+    ├── service-b/
+    │   ├── Dockerfile
+    │   └── ...
+    ├── nginx.conf
+    └── docker-compose.yml
+    </code></pre>
+
+    <h3>docker-compose.yml</h3>
+    <p>This is your orchestration file, which defines how containers are built and networked.</p>
+
+    <pre><code>version: '3.8'
+
+    services:
+      service-a:
+        build: ./service-a
+        ports:
+          - "3001:3000"
       
-      <h2>Data Migration Strategies</h2>
-      <p>Linear offers several ways to import your existing data:</p>
-      <ul>
-        <li>Direct importers for Jira, GitHub, Asana, and Trello</li>
-        <li>API-based custom migration for other tools</li>
-        <li>CSV import for spreadsheet-based systems</li>
-      </ul>
-      
-      <h2>Training Your Team</h2>
-      <p>Ensure adoption by properly onboarding your team:</p>
-      <ul>
-        <li>Schedule training sessions focused on daily workflows</li>
-        <li>Create a quick reference guide for keyboard shortcuts</li>
-        <li>Assign Linear champions to support team members</li>
-        <li>Start with a pilot project before full rollout</li>
-      </ul>
-    `,
-        coverImage: "/placeholder.svg?height=600&width=800",
-        categories: ["Design", "Research"],
-    },
-    {
-        id: "3",
-        title: "Building your API Stack",
-        slug: "building-your-api-stack",
-        author: "Lana Steiner",
-        date: "1 Jan 2023",
-        excerpt: "The rise of RESTful APIs has been met by a rise in tools for creating, testing, and manag...",
-        content: `
-      <p>Building a robust API stack is essential for modern applications. This article explores the key components and best practices for creating a scalable and maintainable API infrastructure.</p>
-      
-      <h2>Designing Your API</h2>
-      <p>Start with a solid design that follows these principles:</p>
-      <ul>
-        <li>Use RESTful conventions for resource naming and HTTP methods</li>
-        <li>Implement consistent error handling and status codes</li>
-        <li>Design with versioning in mind from the beginning</li>
-        <li>Create comprehensive documentation with examples</li>
-      </ul>
-      
-      <h2>Choosing Your Tech Stack</h2>
-      <p>Select technologies that align with your team's expertise and project requirements:</p>
-      <ul>
-        <li>Backend framework: Node.js/Express, Django, Rails, or Spring Boot</li>
-        <li>API specification: OpenAPI/Swagger for documentation</li>
-        <li>Authentication: OAuth 2.0, JWT, or API keys</li>
-        <li>Database: Consider both SQL and NoSQL options based on data structure</li>
-      </ul>
-      
-      <h2>Testing Strategies</h2>
-      <p>Implement comprehensive testing to ensure reliability:</p>
-      <ul>
-        <li>Unit tests for individual functions and methods</li>
-        <li>Integration tests for API endpoints</li>
-        <li>Contract tests to verify API specifications</li>
-        <li>Performance tests to identify bottlenecks</li>
-      </ul>
-      
-      <h2>Monitoring and Observability</h2>
-      <p>Keep your APIs healthy with proper monitoring:</p>
-      <ul>
-        <li>Implement logging for debugging and audit trails</li>
-        <li>Set up performance monitoring for response times</li>
-        <li>Track error rates and status code distributions</li>
-        <li>Create dashboards for key metrics</li>
-      </ul>
-      
-      <h2>Security Considerations</h2>
-      <p>Protect your API with these security measures:</p>
-      <ul>
-        <li>Implement rate limiting to prevent abuse</li>
-        <li>Use HTTPS for all endpoints</li>
-        <li>Validate and sanitize all input</li>
-        <li>Regularly audit dependencies for vulnerabilities</li>
-      </ul>
-    `,
-        coverImage: "/placeholder.svg?height=600&width=800",
-        categories: ["Design", "Research"],
-    },
-    {
-        id: "4",
-        title: "Grid system for better Design User Interface",
-        slug: "grid-system-for-better-design-user-interface",
-        author: "Olivia Rhye",
-        date: "1 Jan 2023",
-        excerpt:
-            "A grid system is a design tool used to arrange content on a webpage. It is a series of vertical and horizontal lines that create a matrix of intersecting points, which can be used to align and organize page elements.",
-        content: "",
-        coverImage: "/placeholder.svg?height=600&width=800",
-        categories: ["Design", "Interface"],
-    },
-    {
-        id: "5",
-        title: "Bill Walsh leadership lessons",
-        slug: "bill-walsh-leadership-lessons",
-        author: "Alec Whitten",
-        date: "1 Jan 2023",
-        excerpt: "Like to know the secrets of transforming a 2-14 team into a 3x Super Bowl winning Dynasty?",
-        content: `
-      <p>Bill Walsh's leadership approach transformed the San Francisco 49ers from one of the worst teams in NFL history to a dynasty that won three Super Bowls. His methods offer valuable lessons for leaders in any field.</p>
-      
-      <h2>The Standard of Performance</h2>
-      <p>Walsh believed in establishing clear standards that went beyond just winning games. He focused on:</p>
-      <ul>
-        <li>Defining how people should conduct themselves</li>
-        <li>Setting expectations for effort and execution</li>
-        <li>Creating a culture of excellence in every detail</li>
-        <li>Emphasizing process over outcomes</li>
-      </ul>
-      
-      <h2>Teaching as Leadership</h2>
-      <p>Walsh saw himself primarily as a teacher, not just a coach:</p>
-      <ul>
-        <li>He broke complex concepts into teachable components</li>
-        <li>Created detailed scripts and playbooks</li>
-        <li>Emphasized continuous learning and improvement</li>
-        <li>Developed assistant coaches who later became successful head coaches</li>
-      </ul>
-      
-      <h2>The West Coast Offense: Innovation as Advantage</h2>
-      <p>Walsh's innovative offensive system changed football forever:</p>
-      <ul>
-        <li>He developed a timing-based passing game that emphasized precision</li>
-        <li>Adapted his system to the talent available rather than forcing players into a rigid system</li>
-        <li>Created detailed contingency plans for various scenarios</li>
-        <li>Constantly evolved his approach to stay ahead of competitors</li>
-      </ul>
-      
-      <h2>Succession Planning</h2>
-      <p>Walsh understood the importance of developing future leaders:</p>
-      <ul>
-        <li>He created a coaching tree that influenced the entire NFL</li>
-        <li>Delegated responsibility to develop his assistants</li>
-        <li>Documented processes and philosophies</li>
-        <li>Prepared the organization for long-term success beyond his tenure</li>
-      </ul>
-    `,
-        coverImage: "/placeholder.svg?height=600&width=800",
-        categories: ["Leadership", "Management"],
-    },
-    {
-        id: "6",
-        title: "PM mental models",
-        slug: "pm-mental-models",
-        author: "Demi Wilkinson",
-        date: "1 Jan 2023",
-        excerpt: "Mental models are simple expressions of complex processes or relationships.",
-        content: `
-      <p>Mental models help product managers make better decisions by providing frameworks to understand complex problems. Here are some essential mental models every PM should know.</p>
-      
-      <h2>First Principles Thinking</h2>
-      <p>Break down complex problems into their most basic elements:</p>
-      <ul>
-        <li>Question assumptions and conventional wisdom</li>
-        <li>Identify the fundamental truths or components</li>
-        <li>Rebuild your understanding from the ground up</li>
-        <li>Example: Instead of iterating on existing solutions, ask "What problem are we really solving?"</li>
-      </ul>
-      
-      <h2>Opportunity Cost</h2>
-      <p>Every choice means giving up alternatives:</p>
-      <ul>
-        <li>Evaluate what you're giving up by choosing one option</li>
-        <li>Consider the value of the next best alternative</li>
-        <li>Apply to resource allocation, feature prioritization, and roadmap planning</li>
-        <li>Example: Building feature A means not building features B and C with those same resources</li>
-      </ul>
-      
-      <h2>Jobs To Be Done</h2>
-      <p>Focus on what customers are trying to accomplish:</p>
-      <ul>
-        <li>People "hire" products to do specific jobs in their lives</li>
-        <li>Understand the progress customers are trying to make</li>
-        <li>Identify functional, emotional, and social dimensions of jobs</li>
-        <li>Example: People don't buy a drill because they want a drill; they want a hole</li>
-      </ul>
-      
-      <h2>Second-Order Thinking</h2>
-      <p>Consider the consequences beyond immediate effects:</p>
-      <ul>
-        <li>Ask "And then what?" multiple times</li>
-        <li>Anticipate how systems will respond to changes</li>
-        <li>Look for unintended consequences</li>
-        <li>Example: A free feature might increase acquisition but decrease perceived value</li>
-      </ul>
-      
-      <h2>Inversion</h2>
-      <p>Approach problems backward:</p>
-      <ul>
-        <li>Instead of asking how to succeed, ask how to avoid failure</li>
-        <li>Identify what would make your product unsuccessful</li>
-        <li>Work backward from desired outcomes</li>
-        <li>Example: "What would make our users abandon our product?" then avoid those things</li>
-      </ul>
-    `,
-        coverImage: "/placeholder.svg?height=600&width=800",
-        categories: ["Product", "Research", "Frameworks"],
-    },
-    {
-        id: "7",
-        title: "What is Wireframing?",
-        slug: "what-is-wireframing",
-        author: "Candice Wu",
-        date: "1 Jan 2023",
-        excerpt: "Introduction to Wireframing and its Principles. Learn from the best in the industry.",
-        content: `
-      <p>Wireframing is a fundamental step in the design process that helps visualize the structure and functionality of a digital product before adding visual design elements.</p>
-      
-      <h2>What is a Wireframe?</h2>
-      <p>A wireframe is a low-fidelity representation of a design that:</p>
-      <ul>
-        <li>Outlines the page structure and layout</li>
-        <li>Shows the placement of elements and content</li>
-        <li>Communicates functionality without visual distractions</li>
-        <li>Serves as a blueprint for the final design</li>
-      </ul>
-      
-      <h2>Why Wireframe?</h2>
-      <p>Wireframing offers several benefits in the design process:</p>
-      <ul>
-        <li>Allows quick iteration and exploration of ideas</li>
-        <li>Facilitates early feedback before investing in high-fidelity designs</li>
-        <li>Helps identify usability issues and information architecture problems</li>
-        <li>Creates alignment among stakeholders and team members</li>
-        <li>Saves time and resources by validating concepts early</li>
-      </ul>
-      
-      <h2>Types of Wireframes</h2>
-      <p>Wireframes can vary in detail and complexity:</p>
-      <ul>
-        <li><strong>Low-fidelity:</strong> Simple sketches with basic shapes and placeholders</li>
-        <li><strong>Mid-fidelity:</strong> More detailed layouts with accurate proportions and some annotations</li>
-        <li><strong>High-fidelity:</strong> Detailed wireframes with accurate content, spacing, and some interactive elements</li>
-      </ul>
-      
-      <h2>Wireframing Process</h2>
-      <p>A typical wireframing process includes these steps:</p>
-      <ol>
-        <li>Research: Understand user needs and business requirements</li>
-        <li>Information Architecture: Organize content and define user flows</li>
-        <li>Sketching: Create rough drafts of key screens</li>
-        <li>Wireframing: Develop more detailed layouts</li>
-        <li>Review: Gather feedback from stakeholders and users</li>
-        <li>Iteration: Refine based on feedback</li>
-        <li>Documentation: Add annotations explaining functionality</li>
-      </ol>
-      
-      <h2>Tools for Wireframing</h2>
-      <p>Popular tools used for wireframing include:</p>
-      <ul>
-        <li>Figma</li>
-        <li>Sketch</li>
-        <li>Adobe XD</li>
-        <li>Balsamiq</li>
-        <li>Axure RP</li>
-        <li>Miro</li>
-      </ul>
-    `,
-        coverImage: "/placeholder.svg?height=600&width=800",
-        categories: ["Design", "Research"],
-    },
-    {
-        id: "8",
-        title: "How collaboration makes us better designers",
-        slug: "how-collaboration-makes-us-better-designers",
-        author: "Natali Craig",
-        date: "1 Jan 2023",
-        excerpt: "Collaboration can make our teams stronger, and our individual designs better.",
-        content: `
-      <p>Design is increasingly becoming a team sport. This article explores how collaboration enhances the design process and leads to better outcomes.</p>
-      
-      <h2>Breaking Down Silos</h2>
-      <p>Traditional design processes often isolated designers from other disciplines. Modern collaboration:</p>
-      <ul>
-        <li>Brings together diverse perspectives and expertise</li>
-        <li>Integrates design with product, engineering, and business goals</li>
-        <li>Creates shared understanding and alignment</li>
-        <li>Reduces handoff friction and implementation issues</li>
-      </ul>
-      
-      <h2>Collaborative Design Methods</h2>
-      <p>Effective collaboration can be structured through various methods:</p>
-      <ul>
-        <li>Design studios and workshops</li>
-        <li>Pair designing (similar to pair programming)</li>
-        <li>Design critiques and feedback sessions</li>
-        <li>Cross-functional brainstorming</li>
-        <li>User research as a team activity</li>
-      </ul>
-      
-      <h2>Tools That Enable Collaboration</h2>
-      <p>Modern design tools have evolved to support collaborative workflows:</p>
-      <ul>
-        <li>Real-time collaborative editing in Figma</li>
-        <li>Version control and branching for design files</li>
-        <li>Comment and feedback systems</li>
-        <li>Design systems as a collaborative foundation</li>
-        <li>Virtual whiteboarding for remote teams</li>
-      </ul>
-      
-      <h2>Overcoming Collaboration Challenges</h2>
-      <p>Effective collaboration isn't without obstacles:</p>
-      <ul>
-        <li>Balancing individual creative expression with team input</li>
-        <li>Managing design by committee pitfalls</li>
-        <li>Creating psychological safety for honest feedback</li>
-        <li>Establishing clear decision-making processes</li>
-        <li>Accommodating different working styles and preferences</li>
-      </ul>
-      
-      <h2>Measuring Collaborative Success</h2>
-      <p>How to know if your collaborative approach is working:</p>
-      <ul>
-        <li>Improved design quality and consistency</li>
-        <li>Faster time to implementation</li>
-        <li>Reduced rework and design debt</li>
-        <li>Higher team satisfaction and engagement</li>
-        <li>Better alignment between design intent and final product</li>
-      </ul>
-    `,
-        coverImage: "/placeholder.svg?height=600&width=800",
-        categories: ["Design", "Research"],
-    },
-    {
-        id: "9",
-        title: "Our top 10 Javascript frameworks to use",
-        slug: "our-top-10-javascript-frameworks-to-use",
-        author: "Drew Cano",
-        date: "1 Jan 2023",
-        excerpt: "JavaScript frameworks make development easy with extensive features and functionalities.",
-        content: `
-      <p>The JavaScript ecosystem continues to evolve rapidly. Here's our analysis of the top frameworks to consider for your next project.</p>
-      
-      <h2>1. React</h2>
-      <p>Facebook's library for building user interfaces remains dominant:</p>
-      <ul>
-        <li>Component-based architecture for reusable UI elements</li>
-        <li>Virtual DOM for optimized rendering performance</li>
-        <li>Massive ecosystem and community support</li>
-        <li>Flexible integration with various state management solutions</li>
-      </ul>
-      
-      <h2>2. Vue.js</h2>
-      <p>The progressive framework continues to gain popularity:</p>
-      <ul>
-        <li>Gentle learning curve for beginners</li>
-        <li>Comprehensive documentation</li>
-        <li>Incrementally adoptable architecture</li>
-        <li>Built-in state management and routing solutions</li>
-      </ul>
-      
-      <h2>3. Angular</h2>
-      <p>Google's comprehensive framework for enterprise applications:</p>
-      <ul>
-        <li>Full-featured platform with built-in tools</li>
-        <li>TypeScript integration for type safety</li>
-        <li>Dependency injection system</li>
-        <li>Comprehensive testing utilities</li>
-      </ul>
-      
-      <h2>4. Next.js</h2>
-      <p>The React framework for production-ready applications:</p>
-      <ul>
-        <li>Server-side rendering and static site generation</li>
-        <li>Automatic code splitting</li>
-        <li>Built-in routing and API routes</li>
-        <li>Optimized for performance and SEO</li>
-      </ul>
-      
-      <h2>5. Svelte</h2>
-      <p>The compiler-based approach to UI development:</p>
-      <ul>
-        <li>Compiles to highly efficient vanilla JavaScript</li>
-        <li>No virtual DOM overhead</li>
-        <li>Less boilerplate code</li>
-        <li>Built-in animations and state management</li>
-      </ul>
-      
-      <h2>6. Nuxt.js</h2>
-      <p>The intuitive Vue framework:</p>
-      <ul>
-        <li>Similar benefits to Next.js but for Vue applications</li>
-        <li>Automatic route generation</li>
-        <li>Server-side rendering capabilities</li>
-        <li>Module system for extending functionality</li>
-      </ul>
-      
-      <h2>7. Remix</h2>
-      <p>The newest framework focused on web fundamentals:</p>
-      <ul>
-        <li>Built on web standards and native browser features</li>
-        <li>Nested routing with data loading</li>
-        <li>Progressive enhancement philosophy</li>
-        <li>Strong focus on performance and user experience</li>
-      </ul>
-      
-      <h2>8. Astro</h2>
-      <p>The all-in-one web framework:</p>
-      <ul>
-        <li>Multi-framework support (React, Vue, Svelte in one project)</li>
-        <li>Partial hydration for improved performance</li>
-        <li>Content-focused with built-in Markdown support</li>
-        <li>Island architecture for optimized client-side JavaScript</li>
-      </ul>
-      
-      <h2>9. Solid</h2>
-      <p>The reactive library inspired by React:</p>
-      <ul>
-        <li>Fine-grained reactivity without a virtual DOM</li>
-        <li>Familiar React-like syntax</li>
-        <li>Excellent performance benchmarks</li>
-        <li>Small bundle size</li>
-      </ul>
-      
-      <h2>10. Qwik</h2>
-      <p>The resumable framework for instant loading:</p>
-      <ul>
-        <li>Designed for instant startup performance</li>
-        <li>Lazy-loading of code at the component level</li>
-        <li>Serialization of application state</li>
-        <li>HTML-first approach</li>
-      </ul>
-    `,
-        coverImage: "/placeholder.svg?height=600&width=800",
-        categories: ["Software Development", "Tools", "SaaS"],
-    },
-    {
-        id: "10",
-        title: "Podcast: Creating a better CX Community",
-        slug: "podcast-creating-a-better-cx-community",
-        author: "Orlando Diggs",
-        date: "1 Jan 2023",
-        excerpt: "Starting a community doesn't need to be complicated, but how do you get started?",
-        content: `
-      <p>Building a customer experience (CX) community can transform your business and create lasting relationships. This article explores key strategies for creating and nurturing a thriving CX community.</p>
-      
-      <h2>Why Build a CX Community?</h2>
-      <p>A strong customer experience community offers multiple benefits:</p>
-      <ul>
-        <li>Creates a sense of belonging among customers</li>
-        <li>Provides valuable product feedback and insights</li>
-        <li>Reduces support costs through peer-to-peer assistance</li>
-        <li>Increases customer retention and loyalty</li>
-        <li>Transforms customers into brand advocates</li>
-      </ul>
-      
-      <h2>Starting Your Community</h2>
-      <p>Begin with these foundational elements:</p>
-      <ul>
-        <li>Define clear community goals and purpose</li>
-        <li>Select the right platform(s) for your audience</li>
-        <li>Create community guidelines and values</li>
-        <li>Develop a content strategy to spark engagement</li>
-        <li>Recruit initial members to seed discussions</li>
-      </ul>
-      
-      <h2>Fostering Engagement</h2>
-      <p>Keep your community active and engaged with these strategies:</p>
-      <ul>
-        <li>Host regular events like AMAs, webinars, and workshops</li>
-        <li>Create exclusive content for community members</li>
-        <li>Recognize and reward active contributors</li>
-        <li>Facilitate connections between members</li>
-        <li>Involve your team in community discussions</li>
-      </ul>
-      
-      <h2>Measuring Community Success</h2>
-      <p>Track these metrics to evaluate your community's health:</p>
-      <ul>
-        <li>Active member growth and retention</li>
-        <li>Engagement metrics (posts, comments, reactions)</li>
-        <li>Customer satisfaction and NPS scores</li>
-        <li>Support deflection rates</li>
-        <li>Product adoption influenced by community</li>
-      </ul>
-      
-      <h2>Scaling Your Community</h2>
-      <p>As your community grows, consider these strategies:</p>
-      <ul>
-        <li>Develop a community ambassador program</li>
-        <li>Create specialized sub-groups for specific interests</li>
-        <li>Implement automation for routine tasks</li>
-        <li>Expand your community management team</li>
-        <li>Connect online engagement with offline experiences</li>
-      </ul>
-    `,
-        coverImage: "/placeholder.svg?height=600&width=800",
-        categories: ["Podcasts", "Customer Success"],
-    },
+      service-b:
+        build: ./service-b
+        ports:
+          - "3002:3000"
+
+      nginx:
+        image: nginx:latest
+        ports:
+          - "80:80"
+        volumes:
+          - ./nginx.conf:/etc/nginx/nginx.conf
+        depends_on:
+          - service-a
+          - service-b
+    </code></pre>
+
+    <h3>nginx.conf</h3>
+    <p>This file tells NGINX how to route requests to each service:</p>
+
+    <pre><code>http {
+      server {
+        listen 80;
+
+        location /service-a/ {
+          proxy_pass http://service-a:3000/;
+        }
+
+        location /service-b/ {
+          proxy_pass http://service-b:3000/;
+        }
+      }
+    }
+    </code></pre>
+
+    <p>Now, when you access <code>localhost/service-a</code> or <code>localhost/service-b</code>, your requests will be routed to the correct container.</p>
+
+    <h2>Advantages of This Setup</h2>
+    <ul>
+      <li><strong>Isolation:</strong> Each service runs in its own container, with its own dependencies and runtime environment.</li>
+      <li><strong>Portability:</strong> You can ship your app across dev, staging, and production with consistent behavior.</li>
+      <li><strong>Scalability:</strong> Spin up more instances of a single service without affecting others.</li>
+      <li><strong>Ease of Local Testing:</strong> Easily test how services interact with each other using just a few Docker commands.</li>
+    </ul>
+
+    <h2>Challenges and Caveats</h2>
+    <p>While this setup is powerful, it comes with some tradeoffs:</p>
+    <ul>
+      <li><strong>Configuration Complexity:</strong> Managing NGINX config and inter-container networking can get tricky as the number of services increases.</li>
+      <li><strong>Monitoring Overhead:</strong> You’ll need tools like Prometheus, Grafana, or ELK Stack to monitor logs, health, and performance.</li>
+      <li><strong>Cold Start Time:</strong> Spinning up several containers might slow down your local dev environment, depending on your machine.</li>
+    </ul>
+
+    <h2>Optimizing the Workflow</h2>
+    <p>To keep things manageable as your suite grows:</p>
+    <ul>
+      <li>Use a <code>.env</code> file to store shared port values, secrets, and environment modes.</li>
+      <li>Implement health checks in your <code>docker-compose.yml</code> so services don’t start until dependencies are ready.</li>
+      <li>Consider using a service mesh like Istio or Traefik if you plan to move into Kubernetes later.</li>
+    </ul>
+
+    <h2>Real-World Use Cases</h2>
+    <p>This architecture is a great foundation for any of the following:</p>
+    <ul>
+      <li>A dashboard + backend API combo (separate front-end and API containers)</li>
+      <li>Auth, billing, and notification services, each in their own container</li>
+      <li>A lightweight CMS, analytics engine, and user-facing app running side-by-side</li>
+    </ul>
+
+    <h2>Conclusion</h2>
+    <p>Combining Docker and NGINX gives you a clean, developer-friendly way to build, test, and deploy microservice-based applications. It takes some configuration work upfront, but the benefits in maintainability and scalability are well worth it.</p>
+
+    <p>If you're building projects that need to grow modularly, learning this workflow early can save you countless headaches down the line.</p>
+      `,
+    coverImage: "/blogs/nginx-docker.png",
+    categories: ["DevOps", "Software Development", "Tools"],
+  },
+
+  // Blog 6: Accessible Design Matters
+  {
+    id: "170540d8-b7e0-49dd-8911-69757d17af47",
+    title: "What Is Accessible Design and Why It Matters",
+    slug: "what-is-accessible-design",
+    author: "Muhammad Sharjeel",
+    date: "2025-04-13",
+    excerpt:
+      "Accessibility isn’t a nice-to-have. It’s a necessity. Here's why accessible design matters — and how to get it right in your UI and frontend code.",
+    content: `
+  <br/>
+    <h2>Defining Accessible Design</h2>
+    <p>Accessible design refers to the practice of building digital interfaces that everyone can use — regardless of ability, device, or context. It includes everything from making sure your site works well with screen readers to ensuring users can navigate via keyboard or understand visuals with limited color perception.</p>
+
+    <p>It’s not just about compliance — it’s about inclusivity. A well-designed app should never leave someone behind because of a visual, auditory, cognitive, or motor limitation.</p>
+
+    <h2>Why Accessibility Matters</h2>
+    <p>According to the World Health Organization, over <strong>1 billion people</strong> — about 15% of the global population — live with some form of disability. And yet, a surprising number of websites and applications still exclude these users, either unintentionally or through neglect of basic accessibility practices.</p>
+
+    <p>Designing with accessibility in mind benefits everyone. For example:</p>
+    <ul>
+      <li>Captions help not just the deaf, but users in noisy environments.</li>
+      <li>High-contrast text benefits users with vision loss — and those using devices outdoors.</li>
+      <li>Keyboard navigation isn’t just for accessibility — it enhances productivity for power users.</li>
+    </ul>
+
+    <h2>Core Principles of Accessible UI Design</h2>
+    <p>Here are some of the most important foundations of an accessible interface:</p>
+
+    <h3>Semantic HTML</h3>
+    <p>Always use the right element for the job. A button should be a <code>&lt;button&gt;</code>, not a styled <code>&lt;div&gt;</code>. Use headings to create a content hierarchy (<code>&lt;h1&gt; - &lt;h6&gt;</code>), use lists appropriately, and label form inputs with <code>&lt;label&gt;</code> tags.</p>
+
+    <h3>Keyboard Accessibility</h3>
+    <p>All interactive elements — buttons, forms, links, menus — should be reachable and operable using only the keyboard. Use <code>tabIndex</code> responsibly and ensure that <strong>focus states</strong> are visible.</p>
+
+    <h3>Screen Reader Support</h3>
+    <p>Use ARIA attributes wisely to add context where semantic HTML isn’t enough. For example:</p>
+    <pre><code>&lt;button aria-label="Close modal"&gt;&times;&lt;/button&gt;</code></pre>
+    <p>Screen readers translate visual cues into audio for blind users — but only if the code provides enough semantic detail.</p>
+
+    <h3>Color Contrast</h3>
+    <p>Text should have enough contrast against the background to remain legible for people with low vision or color blindness. Tools like <a href="https://webaim.org/resources/contrastchecker/" target="_blank">WebAIM Contrast Checker</a> help you meet the WCAG (Web Content Accessibility Guidelines) minimum of a 4.5:1 contrast ratio for normal text.</p>
+
+    <h3>Alt Text for Images</h3>
+    <p>Decorative images should be marked with empty <code>alt=""</code> attributes. Informative images should describe what’s essential. For example:</p>
+    <pre><code>&lt;img src="team-photo.jpg" alt="Our design team collaborating on wireframes" /&gt;</code></pre>
+
+    <h2>Tips for Making Your UI More Accessible</h2>
+    <ul>
+      <li><strong>Use semantic HTML</strong> as the first line of accessibility support.</li>
+      <li><strong>Test with screen readers</strong> like VoiceOver (macOS) or NVDA (Windows).</li>
+      <li><strong>Ensure keyboard-only navigation</strong> works throughout your site or app.</li>
+      <li><strong>Follow WCAG guidelines</strong> — especially WCAG 2.1 Level AA, which most standards use as a baseline.</li>
+      <li><strong>Label your inputs clearly</strong>, and use descriptive <code>aria-label</code> or <code>aria-labelledby</code> where necessary.</li>
+      <li><strong>Don’t rely solely on color</strong> to convey meaning. Add text or icons to clarify status or messages.</li>
+    </ul>
+
+    <h2>Accessibility Is Not a Feature — It's a Foundation</h2>
+    <p>Accessibility is not something to be tacked on at the end of a project. It needs to be part of your development and design process from the beginning. The more you embed these principles early on, the easier they are to maintain — and the more welcoming your product becomes to a broader audience.</p>
+
+    <p>Inaccessible interfaces aren’t just bad design — they’re broken experiences for the people who need them most.</p>
+
+    <h2>Resources to Learn More</h2>
+    <ul>
+      <li><a href="https://www.w3.org/WAI/" target="_blank">W3C Web Accessibility Initiative</a></li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility" target="_blank">MDN Web Docs – Accessibility</a></li>
+      <li><a href="https://a11yproject.com/" target="_blank">The A11Y Project</a></li>
+    </ul>
+
+    <p>Start small — fix one accessibility issue at a time. Every improvement makes your app better, more inclusive, and more impactful.</p>
+      `,
+    coverImage: "/blogs/accessibility-design.png",
+    categories: ["Design", "Interface", "Inclusivity"],
+  },
+
+  // Blog 7: Grid Systems in UI
+  {
+    id: "7",
+    title: "Grid Systems: The Foundation of Great UI Design",
+    slug: "grid-system-ui-design",
+    author: "Muhammad Sharjeel",
+    date: "2025-04-13",
+    excerpt:
+      "Want cleaner, more balanced layouts? A grid system brings structure, rhythm, and clarity to your UI — and Tailwind makes it easier than ever to implement.",
+    content: `
+    <br/>
+    <h2>Understanding Grid Systems</h2>
+    <p>At its core, a grid system is a layout structure that helps you organize content across a consistent visual framework. Whether you’re designing a landing page, dashboard, or blog layout, grids ensure your UI feels organized, balanced, and intentional.</p>
+
+    <p>In web design, the most common form is the <strong>12-column grid</strong> — a flexible structure that can be easily divided into halves, thirds, fourths, and more. This flexibility makes it the perfect choice for responsive design, where different screen sizes require adaptable layouts.</p>
+
+    <h2>Why Use a Grid System?</h2>
+    <p>Without a grid, layouts tend to look unstructured or visually chaotic. Grid systems solve that by offering these key benefits:</p>
+
+    <ul>
+      <li><strong>Visual consistency:</strong> Aligning elements along a grid improves spacing, proportions, and alignment across the page.</li>
+      <li><strong>Responsive behavior:</strong> Grids make it easier to design interfaces that adapt to different screen sizes gracefully.</li>
+      <li><strong>Design scalability:</strong> When components follow a grid, you can mix and match them across pages with minimal visual disruption.</li>
+      <li><strong>User comprehension:</strong> Structured layouts guide the eye better and make information easier to scan and understand.</li>
+    </ul>
+
+    <h2>Grid System in Tailwind CSS</h2>
+    <p>Tailwind CSS makes it incredibly easy to implement grid-based layouts using utility classes. Here's a basic example using the popular 12-column layout:</p>
+
+    <pre><code>&lt;div className="grid grid-cols-12 gap-4"&gt;
+      &lt;div className="col-span-4"&gt;Sidebar&lt;/div&gt;
+      &lt;div className="col-span-8"&gt;Main Content&lt;/div&gt;
+    &lt;/div&gt;
+    </code></pre>
+
+    <p>This setup divides the page into 12 columns. The sidebar takes 4 columns, and the main content takes 8 — a balanced 1/3 to 2/3 ratio. Tailwind's grid utilities also allow for responsive variations:</p>
+
+    <pre><code>&lt;div className="grid grid-cols-1 md:grid-cols-12 gap-6"&gt;
+      &lt;div className="md:col-span-3"&gt;Sidebar&lt;/div&gt;
+      &lt;div className="md:col-span-9"&gt;Main&lt;/div&gt;
+    &lt;/div&gt;
+    </code></pre>
+
+    <p>On smaller screens, both sections stack vertically; on larger screens, they snap into their respective grid spans.</p>
+
+    <h2>Common Grid Use Cases</h2>
+    <p>Grid systems are widely used across all types of UIs, including:</p>
+
+    <ul>
+      <li><strong>Marketing Pages:</strong> Centered content with asymmetric feature layouts.</li>
+      <li><strong>Dashboards:</strong> Sidebar navigation with main content areas and widgets.</li>
+      <li><strong>Image Galleries:</strong> Uniform or masonry-style image grids.</li>
+      <li><strong>Forms:</strong> Side-by-side input fields that collapse on mobile.</li>
+    </ul>
+
+    <h2>Grid vs. Flexbox</h2>
+    <p>While <code>flexbox</code> excels at one-dimensional layout (either row or column), <code>grid</code> is better suited for two-dimensional layouts. Use flex when you're distributing items in a single row (like buttons or nav links), and use grid when you’re managing the overall page structure.</p>
+
+    <h2>Designing Beyond the Grid</h2>
+    <p>While grids create structure, design is never one-size-fits-all. You should still experiment with breaking the grid for intentional visual contrast — such as offset images, overlapping text, or interactive animations. Just ensure that your overall rhythm isn’t compromised in the process.</p>
+
+    <h2>Final Thoughts</h2>
+    <p>If you want to build interfaces that feel cohesive and scalable, mastering grid systems is essential. You’ll not only speed up your layout process but also dramatically improve the visual clarity of your designs. Combine grid principles with a utility-first framework like Tailwind, and you’ve got a recipe for scalable, clean, and modern UIs.</p>
+
+    <p>Start with structure, layer in creativity, and never underestimate the power of invisible rules guiding a beautiful layout.</p>
+      `,
+    coverImage: "/blogs/grid-systems.jpg",
+    categories: ["Design", "Interface", "Best Practices"],
+  },
 ]
 
 export function getAllBlogs(): BlogPost[] {
-    return blogPosts
+  return blogPosts
 }
 
 export function getRecentBlogs(count = 3, excludeId?: string): BlogPost[] {
-    return blogPosts.filter((blog) => !excludeId || blog.id !== excludeId).slice(0, count)
+  return blogPosts.filter((blog) => !excludeId || blog.id !== excludeId).slice(0, count)
 }
 
 export function getBlogBySlug(slug: string): BlogPost | undefined {
-    return blogPosts.find((blog) => blog.slug === slug)
+  return blogPosts.find((blog) => blog.slug === slug)
 }

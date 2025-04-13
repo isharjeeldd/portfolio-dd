@@ -89,17 +89,17 @@ function ProjectCard({ project, index }: ProjectCardProps) {
             onMouseLeave={() => setIsHovered(false)}
         >
             {/* Project Image with Hover Effect */}
-            <Link href={project.liveUrl} className="block relative overflow-hidden aspect-[16/9] rounded-lg" target="_blank" rel="noopener noreferrer">
+            <Link href={project.liveUrl} className="block relative overflow-hidden aspect-[16/9] object-cover rounded-lg" target="_blank" rel="noopener noreferrer">
                 <motion.div className="relative" whileHover={{ scale: 1.02 }} transition={{ duration: 0.3 }}>
                     <Image
                         src={project.image || "/placeholder.svg"}
                         alt={project.title}
                         width={800}
                         height={250}
-                        className="object-cover aspect-[16/9] transition-transform duration-300 group-hover:scale-105 filter grayscale group-hover:grayscale-0"
+                        className="object-contain aspect-[16/9] transition-transform duration-300 group-hover:scale-105 filter grayscale group-hover:grayscale-0"
                     />
                     <motion.div
-                        className="absolute aspect-[16/9] inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center"
+                        className="absolute aspect-[16/9] object-cover inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center"
                         initial={false}
                         animate={{ opacity: isHovered ? 1 : 0 }}
                     >
@@ -144,7 +144,7 @@ function ProjectCard({ project, index }: ProjectCardProps) {
                                 href={project.githubUrl}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="text-gray-400 hover:text-white transition-colors"
+                                className="text-gray-400 dark:hover:text-white hover:text-black transition-colors"
                             >
                                 <Github className="w-5 h-5" />
                                 <span className="sr-only">GitHub Repository</span>
