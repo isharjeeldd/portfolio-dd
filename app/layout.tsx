@@ -5,7 +5,6 @@ import './globals.css'
 import Layout from '@/components/layout'
 import { TooltipProvider } from '@/components/ui/tooltip'
 import { Toaster } from '@/components/ui/toaster'
-import Head from 'next/head'
 
 const poppins = Poppins({
   subsets: ['latin'],

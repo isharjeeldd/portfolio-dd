@@ -14,7 +14,7 @@ export const blogPosts: BlogPost[] = [
       <br/>
       <h2>Why a New Portfolio?</h2>
       <p>As a full-stack developer, your personal website should be a reflection of your evolving craft. My old portfolio no longer represented my capabilities, so I decided to rebuild from the ground up — with speed, accessibility, and aesthetic balance at its core.</p>
-
+    
       <h2>Tech Stack Breakdown</h2>
       <p>This version is built using a modern frontend stack that allows rapid iteration, excellent performance, and delightful developer experience:</p>
       <ul>
@@ -24,7 +24,7 @@ export const blogPosts: BlogPost[] = [
         <li><strong>Tailwind CSS</strong> – Enables utility-first styling with full design control.</li>
         <li><strong>Framer Motion</strong> – Adds smooth transitions and animations that elevate the user experience.</li>
       </ul>
-
+    
       <h2>Design Principles</h2>
       <p>I followed a minimalist, content-first design language with a focus on:</p>
       <ul>
@@ -32,7 +32,7 @@ export const blogPosts: BlogPost[] = [
         <li>Dark mode as the default for a sleek look.</li>
         <li>Centralized content in the hero section, shifting to left-aligned grids in blogs and projects for usability.</li>
       </ul>
-
+    
       <h2>Developer Experience (DX)</h2>
       <p>From a coding perspective, everything is optimized for maintainability:</p>
       <ul>
@@ -40,12 +40,16 @@ export const blogPosts: BlogPost[] = [
         <li>All components are reusable and wrapped in Radix primitives where necessary.</li>
         <li>Used <code>clsx</code> and <code>tailwind-merge</code> for safe, dynamic class merging.</li>
       </ul>
-
+    
+      <h2>Using Generative AI</h2>
+      <p>One of the biggest productivity boosts came from integrating generative AI into the workflow. I used <strong>ChatGPT</strong> not only for code suggestions and debugging, but also to bounce off structural and UX ideas — acting almost like a second pair of eyes in the room.</p>
+      <p>Additionally, I relied on <strong>v0.dev</strong> to quickly scaffold beautiful UI components that matched my design direction. It helped me move faster while keeping things visually consistent.</p>
+      <p>These tools didn’t replace creativity — they amplified it. If you’re not already using generative AI in your build pipeline, I highly recommend exploring it. The speed and support it provides are game-changers.</p>
+    
       <h2>GitHub Repository</h2>
-<p>The source code for this portfolio is fully open-source and available here:</p>
-<p><a href="https://github.com/isharjeeldd/portfolio-dd" target="_blank" rel="noopener noreferrer">🔗 github.com/isharjeeldd/portfolio-dd</a></p>
-
-
+      <p>The source code for this portfolio is fully open-source and available here:</p>
+      <p><a href="https://github.com/isharjeeldd/portfolio-dd" target="_blank" rel="noopener noreferrer">🔗 github.com/isharjeeldd/portfolio-dd</a></p>
+    
       <h2>What’s Next?</h2>
       <p>This site isn't just static — it's growing. Future additions will include:</p>
       <ul>
@@ -53,11 +57,11 @@ export const blogPosts: BlogPost[] = [
         <li>Project walkthroughs with interactive demos.</li>
         <li>Developer notes and design insights from real-world builds.</li>
       </ul>
-
+    
       <h2>Fork, Learn, Build</h2>
       <p>This project is licensed under the GNU GPL, which means you're free to fork, modify, and share. Just make sure your derivative works follow the same license terms.</p>
       <p><em>If you find something valuable in this portfolio, feel free to star, fork, or reach out — I’d love to see how you build on it.</em></p>
-          `,
+    `,
     coverImage: "/blogs/portfolio-blog.png",
     categories: ["Design", "Frameworks", "Software Development", "Tools"],
   },
