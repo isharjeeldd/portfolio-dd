@@ -43,6 +43,6 @@ Clone the repo and install dependencies.
 
 ```bash
 git clone https://github.com/isharjeeldd/portfolio-dd.git
-cd portfolio
+cd portfolio-dd
 npm install --legacy-peer-deps
 npm run dev

@@ -5,6 +5,7 @@ import './globals.css'
 import Layout from '@/components/layout'
 import { TooltipProvider } from '@/components/ui/tooltip'
 import { Toaster } from '@/components/ui/toaster'
+import Head from 'next/head'
 
 const poppins = Poppins({
   subsets: ['latin'],
@@ -42,7 +43,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/opengraph-image.png", // URL to the banner or thumbnail image
+        url: "/https://www.sharjeelafzaal.com/opengraph-image.png", // URL to the banner or thumbnail image
         width: 1200, // Width of the image
         height: 630, // Height of the image
         alt: "Portfolio Website Banner Image" // Alt text for accessibility
@@ -57,7 +58,7 @@ export const metadata: Metadata = {
       "Portfolio website created with Shad CN / aceternity UI, a full stack developer and blogger, crafting digital experiences that make a difference.",
     images: [
       {
-        url: "/twitter-image.png", // URL to the image optimized for Twitter,
+        url: "https://www.sharjeelafzaal.com/twitter-image.png", // URL to the image optimized for Twitter,
         width: 1200, // Width of the image
         height: 630, // Height of the image
         alt: "Portfolio Website Banner Image" // Alt text for accessibility
@@ -100,6 +101,12 @@ export default function RootLayout({
       <body
         className={`${poppins.className} font-sans antialiased min-h-screen bg-background text-foreground flex flex-col`}
       >
+        <Head>
+          <meta property="og:image" content="https://www.sharjeelafzaal.com/opengraph-image.png" />
+          <meta property="og:image:width" content="1200" />
+          <meta property="og:image:height" content="630" />
+          <meta name="twitter:image" content="https://www.sharjeelafzaal.com/twitter-image.png" />
+        </Head>
         <TooltipProvider disableHoverableContent>
           <ThemeProvider
             attribute="class"
