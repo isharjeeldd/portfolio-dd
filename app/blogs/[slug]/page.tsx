@@ -11,26 +11,28 @@ interface BlogDetailPageProps {
     }
 }
 
-export async function generateMetadata({ params }: BlogDetailPageProps): Promise<Metadata> {
-    const blog = getBlogBySlug(params.slug)
+export async function generateMetadata(
+    { params }: { params: { slug: string } }
+): Promise<Metadata> {
+    const blog = getBlogBySlug(params.slug);
 
     if (!blog) {
         return {
             title: "Blog Post Not Found",
-        }
+        };
     }
 
     return {
-        title: `${blog.title} | Your Company Blog`,
+        title: `${blog.title} | Blog Post`,
         description: blog.excerpt,
         openGraph: {
-            title: `${blog.title} | Your Company Blog`,
+            title: `${blog.title} | Blog Post`,
             description: blog.excerpt,
-            url: `https://yourcompany.com/blogs/${blog.slug}`,
-            siteName: "Your Company",
+            url: `https://sharjeelafzaal.com/blogs/${blog.slug}`,
+            siteName: "Muhammad Sharjeel - Blogs",
             images: [
                 {
-                    url: blog.coverImage || "https://yourcompany.com/default-og-image.jpg",
+                    url: blog.coverImage || "https://sharjeelafzaal.com/opengraph-image.png",
                     width: 1200,
                     height: 630,
                 },
@@ -43,11 +45,11 @@ export async function generateMetadata({ params }: BlogDetailPageProps): Promise
         },
         twitter: {
             card: "summary_large_image",
-            title: `${blog.title} | Your Company Blog`,
+            title: `${blog.title} | Blog Post`,
             description: blog.excerpt,
-            images: [blog.coverImage || "https://yourcompany.com/default-twitter-image.jpg"],
+            images: [blog.coverImage || "https://sharjeelafzaal.com/twitter-image.png"],
         },
-    }
+    };
 }
 
 export default function BlogDetailPage({ params }: BlogDetailPageProps) {
@@ -64,7 +66,7 @@ export default function BlogDetailPage({ params }: BlogDetailPageProps) {
             <ShareButtons title={blog.title} slug={blog.slug} />
             <main className="container max-w-7xl mx-auto px-4 py-24 mt-28 md:px-0">
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">
-                    <div className="lg:col-span-8 order-2 lg:order-1">
+                    <div className="lg:col-span-8">
                         <article>
                             <h1 className="text-3xl sm:text-4xl font-bold mb-4">{blog.title}</h1>
                             <p className="text-muted-foreground mb-6">
@@ -73,7 +75,7 @@ export default function BlogDetailPage({ params }: BlogDetailPageProps) {
                             <BlogContent blog={blog} />
                         </article>
                     </div>
-                    <div className="lg:col-span-4 order-1 lg:order-2">
+                    <div className="lg:col-span-4">
                         <RecentPostsSidebar posts={recentPosts} />
                     </div>
                 </div>

@@ -74,7 +74,7 @@ export function Footer() {
               <ul className="space-y-2 text-sm">
                 {['Projects', 'Resume'].map((item) => (
                   <li key={item}>
-                    <Link href={`/${item.toLowerCase()}`} className="text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-gray-100 transition-colors">
+                    <Link href={`${item === "Resume" ? "/resume-sharjeel.pdf" : `/${item.toLowerCase()}`}`} target={`${item === "Resume" ? "_blank" : "_self"}`} className="text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-gray-100 transition-colors">
                       {item}
                     </Link>
                   </li>

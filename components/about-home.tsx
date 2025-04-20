@@ -2,7 +2,6 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { CustomButton } from "./custom-button";
 import Link from 'next/link'
 import { ArrowRight } from "lucide-react";
 import Bitmoji from "../public/bitmoji/bitmoji3.png"
@@ -15,7 +14,7 @@ const AboutHome = () => {
 
     return (
         <div>
-            <div className="h-[100vh] w-full flex flex-wrap justify-between items-center">
+            <div className="h-[80vh] md:h-[100vh] w-full flex flex-wrap justify-between items-center">
                 <div className="space-y-6 text-start w-full md:w-[50%]">
                     {/* Main heading */}
                     <LinePullUp text={textArray} gradient={false} className={headingCss} />

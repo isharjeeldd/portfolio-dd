@@ -11,7 +11,6 @@ import { AnimatedTestimonials } from "@/components/ui/animated-testimonials";
 import { LinkPreview } from "./ui/link-preview";
 import { motion } from "framer-motion";
 import { subheadingCss } from "@/constants";
-import { HoverBorderGradient } from "./ui/hover-border-gradient";
 import { Button } from "./ui/button";
 
 const container = {

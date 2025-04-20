@@ -59,7 +59,12 @@ export default function ShareButtons({ title, slug }: ShareButtonsProps) {
 
     return (
         <motion.div
-            className="fixed left-6 top-1/2 -translate-y-1/2 flex flex-col items-center gap-3"
+            className="
+            fixed z-50
+            flex gap-3
+            sm:left-6 sm:top-1/2 sm:-translate-y-1/2 sm:flex-col
+            left-0 bottom-0 w-full justify-center bg-background/90 backdrop-blur-sm py-3 sm:py-0 sm:w-auto sm:bg-transparent
+          "
             variants={container}
             initial="hidden"
             animate="show"
@@ -70,7 +75,7 @@ export default function ShareButtons({ title, slug }: ShareButtonsProps) {
                         <Button
                             variant="outline"
                             size="icon"
-                            className="rounded-full w-10 h-10 bg-background/80 backdrop-blur-sm hover:bg-primary hover:text-white transition-colors"
+                            className="rounded-full w-10 h-10 bg-background/80 hover:bg-primary hover:text-white transition-colors"
                             onClick={() => window.open(shareLinks.twitter, "_blank")}
                         >
                             <Twitter className="h-4 w-4" />
@@ -87,7 +92,7 @@ export default function ShareButtons({ title, slug }: ShareButtonsProps) {
                         <Button
                             variant="outline"
                             size="icon"
-                            className="rounded-full w-10 h-10 bg-background/80 backdrop-blur-sm hover:bg-primary hover:text-white transition-colors"
+                            className="rounded-full w-10 h-10 bg-background/80 hover:bg-primary hover:text-white transition-colors"
                             onClick={() => window.open(shareLinks.facebook, "_blank")}
                         >
                             <Facebook className="h-4 w-4" />
@@ -104,7 +109,7 @@ export default function ShareButtons({ title, slug }: ShareButtonsProps) {
                         <Button
                             variant="outline"
                             size="icon"
-                            className="rounded-full w-10 h-10 bg-background/80 backdrop-blur-sm hover:bg-primary hover:text-white transition-colors"
+                            className="rounded-full w-10 h-10 bg-background/80 hover:bg-primary hover:text-white transition-colors"
                             onClick={() => window.open(shareLinks.linkedin, "_blank")}
                         >
                             <Linkedin className="h-4 w-4" />
@@ -121,7 +126,7 @@ export default function ShareButtons({ title, slug }: ShareButtonsProps) {
                         <Button
                             variant="outline"
                             size="icon"
-                            className="rounded-full w-10 h-10 bg-background/80 backdrop-blur-sm hover:bg-primary hover:text-white transition-colors"
+                            className="rounded-full w-10 h-10 bg-background/80 hover:bg-primary hover:text-white transition-colors"
                             onClick={copyToClipboard}
                         >
                             <Link2 className="h-4 w-4" />

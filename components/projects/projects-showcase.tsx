@@ -56,7 +56,7 @@ export default function ProjectsShowcase() {
             <div ref={containerRef} className="relative flex flex-col lg:flex-row">
                 {/* Left side - scrollable content */}
                 <div className="w-full lg:w-[60%]">
-                    <div className="flex flex-col">
+                    <div className="flex flex-col gap-12 mb-12 md:mb-0 md:gap-0">
                         {projectsData.map((project, index) => (
                             <motion.div
                                 key={project.id}
@@ -68,7 +68,7 @@ export default function ProjectsShowcase() {
                                     delay: 0.6,
                                     ease: "easeOut",
                                 }}
-                                className="min-h-screen flex items-center justify-center"
+                                className="md:min-h-screen flex items-center justify-center"
                             >
                                 <ProjectCard project={project} index={index} />
                             </motion.div>
@@ -79,7 +79,7 @@ export default function ProjectsShowcase() {
                 {/* Right side - fixed content that becomes absolute */}
                 <div
                     ref={rightPanelRef}
-                    className={`w-full lg:w-[40%] ${isRightPanelFixed ? "lg:sticky lg:top-0" : "lg:absolute lg:bottom-0 lg:right-0" //lg:right-[-10%]
+                    className={`w-full hidden md:block lg:w-[40%] ${isRightPanelFixed ? "lg:sticky lg:top-0" : "lg:absolute lg:bottom-0 lg:right-0" //lg:right-[-10%]
                         } lg:h-screen`}
                 >
                     <div className="h-full flex items-center justify-center p-8">

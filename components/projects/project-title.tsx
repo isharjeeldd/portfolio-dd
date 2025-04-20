@@ -18,7 +18,7 @@ const ProjectTitle = () => {
             {/* Main heading */}
             {/* md:w-[50%] */}
 
-            <div className="h-[100vh] w-full flex flex-wrap justify-between items-center">
+            <div className="h-[80vh] md:h-[100vh] w-full flex flex-wrap justify-between items-center">
                 <div className="space-y-6 text-start w-full md:w-[50%]">
                     {/* Main heading */}
                     <LinePullUp text={textArray} gradient={false} className={headingCss} />

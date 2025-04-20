@@ -77,22 +77,22 @@ export default function Hero() {
         <LinePullUp text={textArray} gradient={true} className={`${headingCss}`} />
         <motion.p
           variants={item}
-          className={`${paragraphCss} mb-8 mt-4 mx-auto text-center w-full max-w-[50%]`}
+          className={`${paragraphCss} mb-8 mt-4 mx-auto text-center w-full max-w-full md:max-w-[50%]`}
         >
           Obsessed with developer experience, robust, scalable and user-friendly applications.
         </motion.p>
 
         <motion.div variants={item} className="mb-8 flex items-center gap-4 justify-center">
-          <CustomButton2 size='md' className='' spinSpeed='fast'>
-            <span>Download Resume</span>
+          <CustomButton2 href="/resume-sharjeel.pdf" target='_blank' size='md' spinSpeed='fast'>
+            <span className='text-xs md:text-[14px] md:p-1'>Download Resume</span>
           </CustomButton2>
           <HoverBorderGradient
             containerClassName="rounded-full"
             as="button"
-            className="dark:bg-black bg-white text-black dark:text-white p-3 px-6 flex items-center space-x-2 text-sm font-medium"
+            className="dark:bg-black bg-white text-black dark:text-white md:p-3 !px-6 flex items-center space-x-2 text-sm font-medium"
           >
             <Link href="/about">
-              <span>Know more about me</span>
+              <span className='text-xs md:text-[14px]'>Know more about me</span>
             </Link>
           </HoverBorderGradient>
         </motion.div>

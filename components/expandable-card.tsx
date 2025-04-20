@@ -162,7 +162,7 @@ export function ExpandableCard() {
         ) : null}
       </AnimatePresence>
       <motion.ul
-        className="max-w-full mx-auto w-full grid grid-cols-1 md:grid-cols-3 items-start gap-4"
+        className="max-w-full mx-auto w-full grid grid-cols-1 md:grid-cols-3 items-start md:gap-4 gap-12"
         initial="hidden"
         whileInView="show"
         viewport={{ once: true }}

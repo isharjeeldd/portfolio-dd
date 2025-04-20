@@ -50,7 +50,7 @@ export default function RecentBlogs({ blogs, isCalledFromMain }: RecentBlogsProp
                 </>
             }
             <motion.div
-                className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8"
+                className="grid grid-cols-1 md:grid-cols-2 gap-14 sm:gap-8"
                 variants={container}
                 initial="hidden"
                 whileInView="show"
@@ -62,7 +62,7 @@ export default function RecentBlogs({ blogs, isCalledFromMain }: RecentBlogsProp
                 </motion.div>
 
                 {/* Small Blogs (Staggered List) */}
-                <motion.div className="md:col-span-1 space-y-6 sm:space-y-8" variants={container}>
+                <motion.div className="md:col-span-1 space-y-12 sm:space-y-8" variants={container}>
                     {blogs.slice(1, 3).map((blog) => (
                         <motion.div key={blog.id} variants={item}>
                             <SmallBlogCard blog={blog} />

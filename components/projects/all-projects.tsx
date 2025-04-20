@@ -67,7 +67,6 @@ interface ProjectCardProps {
 }
 
 function ProjectCard({ project, index }: ProjectCardProps) {
-    const [isHovered, setIsHovered] = useState(false)
 
     const tagColors: Record<string, string> = {
         Design: "bg-[#DBEAFE] text-[#1E40AF] dark:bg-[#1E40AF]/20 dark:text-[#93C5FD]",
@@ -84,10 +83,7 @@ function ProjectCard({ project, index }: ProjectCardProps) {
                 hidden: { opacity: 0, y: 20 },
                 show: { opacity: 1, y: 0 },
             }}
-            className="group"
-            onMouseEnter={() => setIsHovered(true)}
-            onMouseLeave={() => setIsHovered(false)}
-        >
+            className="group">
             {/* Project Image with Hover Effect */}
             <Link href={project.liveUrl} className="block relative overflow-hidden aspect-[16/9] object-cover rounded-lg" target="_blank" rel="noopener noreferrer">
                 <motion.div className="relative" whileHover={{ scale: 1.02 }} transition={{ duration: 0.3 }}>
@@ -98,13 +94,9 @@ function ProjectCard({ project, index }: ProjectCardProps) {
                         height={250}
                         className="object-contain aspect-[16/9] transition-transform duration-300 group-hover:scale-105 filter grayscale group-hover:grayscale-0"
                     />
-                    <motion.div
-                        className="absolute aspect-[16/9] object-cover inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center"
-                        initial={false}
-                        animate={{ opacity: isHovered ? 1 : 0 }}
-                    >
+                    <div className="absolute aspect-[16/9] object-cover inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                         <span className="bg-white text-black px-6 py-2.5 rounded-full text-sm font-medium">Go to Website</span>
-                    </motion.div>
+                    </div>
                 </motion.div>
             </Link>
 

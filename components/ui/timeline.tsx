@@ -135,7 +135,7 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
             whileInView="show"
             viewport={{ once: true }}
             variants={containerVariant}
-            className="relative h-[300px] md:h-full min-h-[300px] rounded-2xl overflow-hidden"
+            className="relative hidden md:block h-[300px] md:h-full min-h-[300px] rounded-2xl overflow-hidden"
           >
 
             {/* Skill nodes */}

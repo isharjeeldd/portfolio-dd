@@ -67,4 +67,13 @@ export const allProjectsData = [
         tags: ["Design", "Identity", "Presentation"],
         liveUrl: "https://parmafamilydentalcenter.com/",
     },
+    {
+        id: "sites-website",
+        title: "Sites Website",
+        description:
+            "Strategic Institute of Technology Ethics merges cutting-edge AI research with practical consultancy. We empower organizations in ethical AI governance and responsible innovation, guiding you through the complex AI landscape.",
+        image: "/projects/site-website.png",
+        tags: ["AI Ethics", "Consultancy", "Governance"],
+        liveUrl: "https://sites-website.netlify.app/",
+    }
 ];

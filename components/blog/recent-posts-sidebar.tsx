@@ -18,7 +18,7 @@ export default function RecentPostsSidebar({ posts }: RecentPostsSidebarProps) {
             transition={{ duration: 0.5 }}
             className="sticky top-24"
         >
-            <h2 className="text-xl font-bold mb-6">Recent blog posts</h2>
+            <h2 className="text-3xl md:text-xl font-bold mb-6 mt-10 md:mt-0">Recent blog posts</h2>
             <div className="space-y-6">
                 {posts.map((post, index) => (
                     <RecentPostCard key={post.id} post={post} index={index} />
