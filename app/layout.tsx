@@ -23,11 +23,11 @@ export const metadata: Metadata = {
         : `http://localhost:${process.env.PORT || 3000}`
   ),
   title: {
-    default: "Portfolio Website", // Default title for fallback
-    template: "%s | Portfolio Website" // Template for dynamic titles
+    default: "Muhammad Sharjeel – Full Stack Developer", // Default title for fallback
+    template: "%s | Muhammad Sharjeel – Full Stack Developer" // Template for dynamic titles
   },
   description:
-    "Portfolio website created with Shad CN / aceternity UI, a full stack developer and blogger, crafting digital experiences that make a difference.",
+    "I'm Muhammad Sharjeel, a full stack developer and blogger, building modern, scalable web experiences using Next.js, Tailwind CSS, and ShadCN UI. Explore my portfolio, projects, and blogs.",
   alternates: {
     canonical: "/",
     languages: {
@@ -39,11 +39,11 @@ export const metadata: Metadata = {
     url: "/",
     title: "Portfolio Website",
     description:
-      "Portfolio website created with Shad CN / aceternity UI, a full stack developer and blogger, crafting digital experiences that make a difference.",
+      "I'm Muhammad Sharjeel, a full stack developer and blogger, building modern, scalable web experiences using Next.js, Tailwind CSS, and ShadCN UI. Explore my portfolio, projects, and blogs.",
     type: "website",
     images: [
       {
-        url: "/https://www.sharjeelafzaal.com/opengraph-image.png", // URL to the banner or thumbnail image
+        url: "https://www.sharjeelafzaal.com/opengraph-image.png", // URL to the banner or thumbnail image
         width: 1200, // Width of the image
         height: 630, // Height of the image
         alt: "Portfolio Website Banner Image" // Alt text for accessibility
@@ -55,7 +55,7 @@ export const metadata: Metadata = {
     card: "summary_large_image", // Twitter card type
     title: "Portfolio Website",
     description:
-      "Portfolio website created with Shad CN / aceternity UI, a full stack developer and blogger, crafting digital experiences that make a difference.",
+      "I'm Muhammad Sharjeel, a full stack developer and blogger, building modern, scalable web experiences using Next.js, Tailwind CSS, and ShadCN UI. Explore my portfolio, projects, and blogs.",
     images: [
       {
         url: "https://www.sharjeelafzaal.com/twitter-image.png", // URL to the image optimized for Twitter,
@@ -101,12 +101,12 @@ export default function RootLayout({
       <body
         className={`${poppins.className} font-sans antialiased min-h-screen bg-background text-foreground flex flex-col`}
       >
-        <Head>
+        <head>
           <meta property="og:image" content="https://www.sharjeelafzaal.com/opengraph-image.png" />
           <meta property="og:image:width" content="1200" />
           <meta property="og:image:height" content="630" />
           <meta name="twitter:image" content="https://www.sharjeelafzaal.com/twitter-image.png" />
-        </Head>
+        </head>
         <TooltipProvider disableHoverableContent>
           <ThemeProvider
             attribute="class"
