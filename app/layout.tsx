@@ -37,7 +37,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     url: "/",
-    title: "Portfolio Website",
+    title: "Muhammad Sharjeel – Full Stack Developer",
     description:
       "I'm Muhammad Sharjeel, a full stack developer and blogger, building modern, scalable web experiences using Next.js, Tailwind CSS, and ShadCN UI. Explore my portfolio, projects, and blogs.",
     type: "website",
@@ -49,11 +49,11 @@ export const metadata: Metadata = {
         alt: "Portfolio Website Banner Image" // Alt text for accessibility
       }
     ],
-    siteName: "Portfolio Website" // The name of your site
+    siteName: "Muhammad Sharjeel – Full Stack Developer" // The name of your site
   },
   twitter: {
     card: "summary_large_image", // Twitter card type
-    title: "Portfolio Website",
+    title: "Muhammad Sharjeel – Full Stack Developer",
     description:
       "I'm Muhammad Sharjeel, a full stack developer and blogger, building modern, scalable web experiences using Next.js, Tailwind CSS, and ShadCN UI. Explore my portfolio, projects, and blogs.",
     images: [
@@ -98,15 +98,15 @@ export default function RootLayout({
 
   return (
     <html lang="en" className={`${poppins.variable} dark`} suppressHydrationWarning>
+      <head>
+        <meta property="og:image" content="https://www.sharjeelafzaal.com/opengraph-image.png" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta name="twitter:image" content="https://www.sharjeelafzaal.com/twitter-image.png" />
+      </head>
       <body
         className={`${poppins.className} font-sans antialiased min-h-screen bg-background text-foreground flex flex-col`}
       >
-        <head>
-          <meta property="og:image" content="https://www.sharjeelafzaal.com/opengraph-image.png" />
-          <meta property="og:image:width" content="1200" />
-          <meta property="og:image:height" content="630" />
-          <meta name="twitter:image" content="https://www.sharjeelafzaal.com/twitter-image.png" />
-        </head>
         <TooltipProvider disableHoverableContent>
           <ThemeProvider
             attribute="class"

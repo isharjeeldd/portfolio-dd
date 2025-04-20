@@ -163,7 +163,7 @@ export const CustomButton2 = ({
 
     // Otherwise render as button
     return (
-        <button className={cn(baseClasses, sizeClasses[size], className)} {...props}>
+        <button type={props.type ?? 'submit'} className={cn(baseClasses, sizeClasses[size], className)} {...props}>
             {buttonContent}
         </button>
     )

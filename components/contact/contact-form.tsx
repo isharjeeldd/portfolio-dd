@@ -5,7 +5,6 @@ import { motion } from "framer-motion"
 import { z } from "zod"
 import { useForm } from "react-hook-form"
 import { zodResolver } from "@hookform/resolvers/zod"
-import { Checkbox } from "@/components/ui/checkbox"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Button } from "@/components/ui/button"
@@ -16,10 +15,9 @@ import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover
 import { ScrollArea } from "@/components/ui/scroll-area"
 import { ChevronsUpDown } from "lucide-react"
 import { countries } from "@/data/countries-data"
-import Bitmoji from "../../public/bitmoji/bitmoji4.png"
 import { headingCss, paragraphCss } from "@/constants"
 import { LinePullUp } from "../line-pull-up"
-import { HoverBorderGradient } from "../ui/hover-border-gradient"
+import { CustomButton2 } from "../custom-button"
 
 const formSchema = z.object({
     firstName: z.string().min(2, { message: "First name must be at least 2 characters." }),
@@ -32,9 +30,6 @@ const formSchema = z.object({
     }),
     phoneNumber: z.string().optional(),
     message: z.string().min(10, { message: "Message must be at least 10 characters." }),
-    privacyPolicy: z.boolean().refine((val) => val === true, {
-        message: "You must agree to our privacy policy.",
-    }),
 })
 
 type FormValues = z.infer<typeof formSchema>
@@ -52,25 +47,37 @@ export default function ContactForm() {
             country: countries.find((c) => c.code === "US") || countries[0],
             phoneNumber: "",
             message: "",
-            privacyPolicy: false,
         },
     })
 
     async function onSubmit(data: FormValues) {
         setIsSubmitting(true)
+        try {
+            const res = await fetch('/api/contact', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(data),
+            })
 
-        // Simulate API call
-        await new Promise((resolve) => setTimeout(resolve, 1500))
+            const result = await res.json()
 
-        console.log(data)
-        setIsSubmitting(false)
-        setIsSubmitted(true)
+            if (!res.ok) {
+                console.error(result)
+                alert("Failed to send message.")
+                return
+            }
 
-        // Reset form after 3 seconds
-        setTimeout(() => {
-            setIsSubmitted(false)
-            form.reset()
-        }, 3000)
+            setIsSubmitted(true)
+            setTimeout(() => {
+                setIsSubmitted(false)
+                form.reset()
+            }, 3000)
+        } catch (err) {
+            console.error(err)
+            alert("Something went wrong.")
+        } finally {
+            setIsSubmitting(false)
+        }
     }
 
     const containerVariants = {
@@ -276,7 +283,7 @@ export default function ContactForm() {
                                             <FormControl>
                                                 <Textarea
 
-                                                    placeholder="Leave us a message..."
+                                                    placeholder="Leave me a message..."
                                                     className="min-h-[120px] resize-none ring-0 focus:ring-0 focus:outline-none focus-visible:ring-transparent focus-visible:outline-none"
                                                     {...field}
                                                 />
@@ -288,28 +295,24 @@ export default function ContactForm() {
                             </motion.div>
 
                             <motion.div variants={itemVariants} className="pt-2">
-                                <HoverBorderGradient
-                                    containerClassName="rounded-full"
-                                    as="button"
-                                    className="dark:bg-black text-sm bg-white text-black dark:text-white flex items-center space-x-2"
-                                >
+                                <CustomButton2 disabled={isSubmitting} size='md' className='' spinSpeed='fast'>
                                     <span>
                                         {isSubmitting ? (
-                                            <>
+                                            <div className="flex items-center justify-centers">
                                                 <Loader2 className="mr-2 h-4 w-4 animate-spin" />
                                                 Sending...
-                                            </>
+                                            </div>
                                         ) : isSubmitted ? (
-                                            <>
+                                            <div className="flex items-center justify-centers">
                                                 <Check className="mr-2 h-4 w-4" />
                                                 Message sent
-                                            </>
+                                            </div>
                                         ) : (
                                             "Send message"
                                         )}
                                         {/* </Button> */}
                                     </span>
-                                </HoverBorderGradient>
+                                </CustomButton2>
                             </motion.div>
                         </form>
                     </Form>
@@ -330,6 +333,6 @@ export default function ContactForm() {
                     </div>
                 </motion.div>
             </div>
-        </section>
+        </section >
     )
 }
