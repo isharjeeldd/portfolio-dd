@@ -11,14 +11,19 @@ interface BlogDetailPageProps {
     }
 }
 
-export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
-    const blog = getBlogBySlug(params.slug);
+export async function generateMetadata(
+    { params }: { params: { slug: string } }
+): Promise<Metadata> {
+    const blog = getBlogBySlug(params.slug)
 
     if (!blog) {
-        return {
-            title: "Blog Post Not Found",
-        };
+        return { title: "Blog Post Not Found" }
     }
+
+    const fullImage =
+        blog.coverImage?.startsWith("http")
+            ? blog.coverImage
+            : `https://www.sharjeelafzaal.com${blog.coverImage || "/opengraph-image.png"}`
 
     return {
         title: `${blog.title} | Blog Post`,
@@ -30,7 +35,7 @@ export async function generateMetadata({ params }: { params: { slug: string } })
             siteName: "Muhammad Sharjeel - Blogs",
             images: [
                 {
-                    url: blog.coverImage,
+                    url: fullImage,
                     width: 1200,
                     height: 630,
                 },
@@ -45,9 +50,9 @@ export async function generateMetadata({ params }: { params: { slug: string } })
             card: "summary_large_image",
             title: `${blog.title} | Blog Post`,
             description: blog.excerpt,
-            images: [blog.coverImage],
+            images: [fullImage],
         },
-    };
+    }
 }
 
 export default function BlogDetailPage({ params }: BlogDetailPageProps) {

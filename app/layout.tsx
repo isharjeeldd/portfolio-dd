@@ -22,17 +22,17 @@ export const metadata: Metadata = {
         : `http://localhost:${process.env.PORT || 3000}`
   ),
   title: {
-    default: "Muhammad Sharjeel – Full Stack Developer",
-    template: "%s | Muhammad Sharjeel – Full Stack Developer",
+    default: "Muhammad Sharjeel – Full Stack Developer", // Default title for fallback
+    template: "%s | Muhammad Sharjeel – Full Stack Developer" // Template for dynamic titles
   },
   description:
     "I'm Muhammad Sharjeel, a full stack developer and blogger, building modern, scalable web experiences using Next.js, Tailwind CSS, and ShadCN UI. Explore my portfolio, projects, and blogs.",
   alternates: {
     canonical: "/",
     languages: {
-      "en-US": "/en-US",
-      "es-ES": "/es-ES",
-    },
+      "en-US": "/en-US", // Alternate language versions
+      "es-ES": "/es-ES"
+    }
   },
   openGraph: {
     url: "/",
@@ -42,35 +42,35 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "https://www.sharjeelafzaal.com/opengraph-image.png",
-        width: 1200,
-        height: 630,
-        alt: "Portfolio Website Banner Image",
-      },
+        url: "https://www.sharjeelafzaal.com/opengraph-image.png", // URL to the banner or thumbnail image
+        width: 1200, // Width of the image
+        height: 630, // Height of the image
+        alt: "Portfolio Website Banner Image" // Alt text for accessibility
+      }
     ],
-    siteName: "Muhammad Sharjeel – Full Stack Developer",
+    siteName: "Muhammad Sharjeel – Full Stack Developer" // The name of your site
   },
   twitter: {
-    card: "summary_large_image",
+    card: "summary_large_image", // Twitter card type
     title: "Muhammad Sharjeel – Full Stack Developer",
     description:
       "I'm Muhammad Sharjeel, a full stack developer and blogger, building modern, scalable web experiences using Next.js, Tailwind CSS, and ShadCN UI. Explore my portfolio, projects, and blogs.",
     images: [
       {
-        url: "https://www.sharjeelafzaal.com/twitter-image.png",
-        width: 1200,
-        height: 630,
-        alt: "Portfolio Website Banner Image",
-      },
+        url: "https://www.sharjeelafzaal.com/twitter-image.png", // URL to the image optimized for Twitter,
+        width: 1200, // Width of the image
+        height: 630, // Height of the image
+        alt: "Portfolio Website Banner Image" // Alt text for accessibility
+      }
     ],
   },
   robots: {
-    index: true,
-    follow: true,
+    index: true, // Allow search engines to index the page
+    follow: true // Allow search engines to follow links
   },
   icons: {
-    icon: "/favicon.ico",
-    apple: "/apple-touch-icon.png",
+    icon: "/favicon.ico", // Path to your favicon
+    apple: "/apple-touch-icon.png" // Path to the Apple Touch Icon
   },
   keywords: [
     "portfolio",
@@ -80,18 +80,29 @@ export const metadata: Metadata = {
     "aceternity website",
     "portfolio website",
     "best portfolio sites",
-    "best portfolio website",
+    "best portfolio wesbsite",
     "2025 portfolio",
   ],
-}
+};
 
-export const viewport = "width=device-width, initial-scale=1, shrink-to-fit=no"
-export const themeColor = "#123456"
+export const viewport = "width=device-width, initial-scale=1, shrink-to-fit=no";
+export const themeColor = "#123456";
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode
+}) {
+
   return (
     <html lang="en" className={`${poppins.variable} dark`} suppressHydrationWarning>
-      <head />
+      <head>
+        <meta property="og:image" content="https://www.sharjeelafzaal.com/opengraph-image.png" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta name="twitter:image" content="https://www.sharjeelafzaal.com/twitter-image.png" />
+      </head>
       <body
         className={`${poppins.className} font-sans antialiased min-h-screen bg-background text-foreground flex flex-col`}
       >
@@ -103,11 +114,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             disableTransitionOnChange
           >
             <Layout>
-              <main className="grid self-center w-full">
+              <main className='grid self-center w-full'>
                 <Toaster />
                 {children}
               </main>
-            </Layout>
+            </ Layout>
           </ThemeProvider>
         </TooltipProvider>
       </body>
