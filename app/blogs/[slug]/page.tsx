@@ -14,16 +14,13 @@ interface BlogDetailPageProps {
 export async function generateMetadata(
     { params }: { params: { slug: string } }
 ): Promise<Metadata> {
-    const blog = getBlogBySlug(params.slug)
+    const blog = getBlogBySlug(params.slug);
 
     if (!blog) {
-        return { title: "Blog Post Not Found" }
+        return {
+            title: "Blog Post Not Found",
+        };
     }
-
-    const fullImage =
-        blog.coverImage?.startsWith("http")
-            ? blog.coverImage
-            : `https://www.sharjeelafzaal.com${blog.coverImage || "/opengraph-image.png"}`
 
     return {
         title: `${blog.title} | Blog Post`,
@@ -31,11 +28,11 @@ export async function generateMetadata(
         openGraph: {
             title: `${blog.title} | Blog Post`,
             description: blog.excerpt,
-            url: `https://www.sharjeelafzaal.com/blogs/${blog.slug}`,
+            url: `https://sharjeelafzaal.com/blogs/${blog.slug}`,
             siteName: "Muhammad Sharjeel - Blogs",
             images: [
                 {
-                    url: fullImage,
+                    url: blog.coverImage || "https://sharjeelafzaal.com/opengraph-image.png",
                     width: 1200,
                     height: 630,
                 },
@@ -50,9 +47,9 @@ export async function generateMetadata(
             card: "summary_large_image",
             title: `${blog.title} | Blog Post`,
             description: blog.excerpt,
-            images: [fullImage],
+            images: [blog.coverImage || "https://sharjeelafzaal.com/twitter-image.png"],
         },
-    }
+    };
 }
 
 export default function BlogDetailPage({ params }: BlogDetailPageProps) {
