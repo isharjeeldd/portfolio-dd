@@ -1,6 +1,7 @@
 import { Metadata } from 'next'
 import ContactForm from '@/components/contact/contact-form'
 import { initialSectionCss } from '@/constants'
+import UpworkSection from '@/components/upwork-section'
 
 export const metadata: Metadata = {
   title: "Contact Me | Muhammad Sharjeel – Full Stack Developer",
@@ -52,6 +53,9 @@ export default function ContactPage() {
     <div className={initialSectionCss}>
       <main className="flex-1">
         <ContactForm />
+        <div className='mt-10'>
+          <UpworkSection />
+        </div>
       </main>
     </div>
   )
