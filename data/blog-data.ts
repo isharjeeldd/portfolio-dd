@@ -4,11 +4,11 @@ export const blogPosts: BlogPost[] = [
   // recent blog post
   {
     "id": "a9d2b5f7-6c35-4e5f-9b2f-ef9e7f45db9c",
-    "title": "Debugging Tips for Young Frontend Developers (React + Next.js)",
+    "title": "Debugging Tips for Frontend Developers (React + Next.js)",
     "slug": "debugging-tips-frontend-developers-react-nextjs",
     "author": "Muhammad Sharjeel",
     "date": "2025-04-26",
-    "excerpt": "Effective debugging is one of the most valuable skills for young frontend developers. Here's a practical guide to debugging with logs, using the debugger keyword, troubleshooting APIs, and improving performance — with a special focus on React and Next.js.",
+    "excerpt": "Effective debugging is one of the most valuable skills for frontend developers. Here's a practical guide to debugging with logs, using the debugger keyword, troubleshooting APIs, and improving performance — with a special focus on React and Next.js.",
     "content": `
       <br/>
       <h2>Why Debugging Mastery Matters</h2>
