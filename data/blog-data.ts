@@ -471,7 +471,7 @@ export const blogPosts: BlogPost[] = [
 
     <p>If you're not experimenting with these tools yet, you're missing out on a productivity boost — not because AI is perfect, but because it's good enough to help you move faster without losing control.</p>
       `,
-    "coverImage": "/blogs/using-generative-ai-to-speed-up.jpg",
+    "coverImage": "/blogs/using-generative-ai-to-speed-up.png",
     "categories": ["AI", "Tools", "Productivity"],
   },
 
@@ -735,7 +735,7 @@ export const blogPosts: BlogPost[] = [
 
     <p>Start with structure, layer in creativity, and never underestimate the power of invisible rules guiding a beautiful layout.</p>
       `,
-    "coverImage": "/blogs/grid-system-ui-design.jpg",
+    "coverImage": "/blogs/grid-system-ui-design.png",
     "categories": ["Design", "Interface", "Best Practices"],
   },
 ]
