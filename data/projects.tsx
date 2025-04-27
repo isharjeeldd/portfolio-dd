@@ -78,7 +78,7 @@ export const projectsData: Project[] = [
             "A modern portfolio showcasing projects, writing, and motion design work.",
         description:
             "This site is a personal showcase of my skills, built using the latest web technologies. Designed with a focus on performance, visual polish, and accessibility, it features blog integration, animations, and a responsive layout.",
-        image: "/blogs/portfolio-blog.png",
+        image: "/opengraph-image.png",
         color: "bg-purple-700",
         textColor: "text-purple-700",
         features: [
@@ -95,6 +95,6 @@ export const projectsData: Project[] = [
             { name: "Framer Motion", icon: <SiFramer className="h-4 w-4" /> },
         ],
         githubUrl: "https://github.com/isharjeeldd/portfolio-dd",
-        liveUrl: "https://your-portfolio-site.vercel.app", // Update when live
+        liveUrl: "https://www.sharjeelafzaal.com",
     },
 ];
