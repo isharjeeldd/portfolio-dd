@@ -137,14 +137,14 @@ export const blogPosts: BlogPost[] = [
 
   // Blog 1: My New Blog
   {
-    id: "da8d010d-4a72-4ac5-9dbc-e657563352c4",
-    title: "Launching My New Portfolio Website",
-    slug: "launching-my-new-portfolio-website",
-    author: "Muhammad Sharjeel",
-    date: "2025-04-13",
-    excerpt:
+    "id": "da8d010d-4a72-4ac5-9dbc-e657563352c4",
+    "title": "Launching My New Portfolio Website",
+    "slug": "launching-my-new-portfolio-website",
+    "author": "Muhammad Sharjeel",
+    "date": "2025-04-13",
+    "excerpt":
       "I'm thrilled to launch my new portfolio website — a blend of design precision and development finesse. Here's a breakdown of the technologies used, design choices made, and the philosophy behind the build.",
-    content: `
+    "content": `
       <br/>
       <h2>Why a New Portfolio?</h2>
       <p>As a full-stack developer, your personal website should be a reflection of your evolving craft. My old portfolio no longer represented my capabilities, so I decided to rebuild from the ground up — with speed, accessibility, and aesthetic balance at its core.</p>
@@ -196,19 +196,19 @@ export const blogPosts: BlogPost[] = [
       <p>This project is licensed under the GNU GPL, which means you're free to fork, modify, and share. Just make sure your derivative works follow the same license terms.</p>
       <p><em>If you find something valuable in this portfolio, feel free to star, fork, or reach out — I’d love to see how you build on it.</em></p>
     `,
-    coverImage: "/blogs/launching-my-new-portfolio-website.png",
-    categories: ["Design", "Frameworks", "Software Development", "Tools"],
+    "coverImage": "/blogs/launching-my-new-portfolio-website.png",
+    "categories": ["Design", "Frameworks", "Software Development", "Tools"],
   },
   // Blog 2: Getting Started with Next.js
   {
-    id: "1ba3cea4-06a9-48e4-81f4-aef1bff6ea5c",
-    title: "Getting Started with Next.js: Structure, Tips & Deployment",
-    slug: "getting-started-with-nextjs",
-    author: "Muhammad Sharjeel",
-    date: "2025-04-13",
-    excerpt:
+    "id": "1ba3cea4-06a9-48e4-81f4-aef1bff6ea5c",
+    "title": "Getting Started with Next.js: Structure, Tips & Deployment",
+    "slug": "getting-started-with-nextjs",
+    "author": "Muhammad Sharjeel",
+    "date": "2025-04-13",
+    "excerpt":
       "A developer-friendly introduction to Next.js — learn how to scaffold projects, understand folder structure, configure features, and deploy to Vercel seamlessly.",
-    content: `
+    "content": `
     <br/>
       <h2>What is Next.js?</h2>
       <p>Next.js is a powerful React-based framework that enables developers to build fast, SEO-friendly web applications with minimal setup. Whether you're building a static marketing page, a full-stack SaaS product, or a blog — Next.js handles routing, rendering modes, and performance out of the box.</p>
@@ -258,7 +258,7 @@ export const blogPosts: BlogPost[] = [
 
       <p>Update your <code>tailwind.config.ts</code> to include:</p>
 
-      <pre><code>content: ["./app/**/*.{js,ts,jsx,tsx}", "./components/**/*.{js,ts,jsx,tsx}"]</code></pre>
+      <pre><code>"content": ["./app/**/*.{js,ts,jsx,tsx}", "./components/**/*.{js,ts,jsx,tsx}"]</code></pre>
 
       <p>And in your global CSS file (usually <code>globals.css</code>):</p>
 
@@ -341,20 +341,20 @@ export const blogPosts: BlogPost[] = [
         <li><a href="https://tailwindcss.com/docs" target="_blank">Tailwind CSS</a></li>
       </ul>
       `,
-    coverImage: "/blogs/getting-started-with-nextjs.png",
-    categories: ["Frameworks", "Software Development", "Tools"],
+    "coverImage": "/blogs/getting-started-with-nextjs.png",
+    "categories": ["Frameworks", "Software Development", "Tools"],
   },
 
   // Blog 3: AI Developer - Threat or Stunt?
   {
-    id: "419a2d55-6193-4afd-8e6d-e5a680e2ed74",
-    title: "Is the ‘AI Developer’ a Threat to Jobs – or a Marketing Stunt?",
-    slug: "ai-developer-threat-or-stunt",
-    author: "Muhammad Sharjeel",
-    date: "2025-04-13",
-    excerpt:
+    "id": "419a2d55-6193-4afd-8e6d-e5a680e2ed74",
+    "title": "Is the ‘AI Developer’ a Threat to Jobs – or a Marketing Stunt?",
+    "slug": "ai-developer-threat-or-stunt",
+    "author": "Muhammad Sharjeel",
+    "date": "2025-04-13",
+    "excerpt":
       "AI dev tools are booming — but are they replacing developers or just reshaping workflows? Here's the balanced view.",
-    content: `
+    "content": `
     <br/>
     <h2>The Fear Around AI Developers</h2>
     <p>With the rapid rise of tools like GitHub Copilot, ChatGPT, and even auto-code generation platforms, a question echoes across tech circles: <strong>Will AI take over developer jobs?</strong> The concern is valid. We've seen similar patterns in other industries — automation replacing factory workers, self-service kiosks reshaping retail, and now AI touching the once "untouchable" realm of software development.</p>
@@ -400,20 +400,20 @@ export const blogPosts: BlogPost[] = [
 
     <p>Embrace the tools. Learn their limits. And then build beyond them.</p>
       `,
-    coverImage: "/blogs/ai-developer-threat-or-stunt.png",
-    categories: ["AI", "Software Development", "Opinion"],
+    "coverImage": "/blogs/ai-developer-threat-or-stunt.png",
+    "categories": ["AI", "Software Development", "Opinion"],
   },
 
   // Blog 4: Using Generative AI to Speed Up Processes
   {
-    id: "70970440-7088-4d51-a03e-35c6403d2f3d",
-    title: "Using Generative AI to Speed Up Creative and Dev Workflows",
-    slug: "using-generative-ai-to-speed-up",
-    author: "Muhammad Sharjeel",
-    date: "2025-04-13",
-    excerpt:
+    "id": "70970440-7088-4d51-a03e-35c6403d2f3d",
+    "title": "Using Generative AI to Speed Up Creative and Dev Workflows",
+    "slug": "using-generative-ai-to-speed-up",
+    "author": "Muhammad Sharjeel",
+    "date": "2025-04-13",
+    "excerpt":
       "From ChatGPT to v0.dev — here's how generative AI helps streamline UI design, prototyping, coding, and problem-solving in modern workflows.",
-    content: `
+    "content": `
     <br/>
     <h2>The Rise of Generative AI in Development</h2>
     <p>Generative AI has gone from a buzzword to a practical tool in everyday development and design workflows. It’s no longer about writing entire applications for you — it’s about <strong>accelerating the thinking and building process</strong>. As a developer and designer, I’ve experimented with several tools and found real value in the ones that help reduce friction in early-stage ideation, layout planning, and prototyping.</p>
@@ -471,20 +471,20 @@ export const blogPosts: BlogPost[] = [
 
     <p>If you're not experimenting with these tools yet, you're missing out on a productivity boost — not because AI is perfect, but because it's good enough to help you move faster without losing control.</p>
       `,
-    coverImage: "/blogs/using-generative-ai-to-speed-up.jpg",
-    categories: ["AI", "Tools", "Productivity"],
+    "coverImage": "/blogs/using-generative-ai-to-speed-up.jpg",
+    "categories": ["AI", "Tools", "Productivity"],
   },
 
   // Blog 5: Docker + NGINX for Microservices
   {
-    id: "2183cfd0-343f-4420-8fcc-a6a0dc17c73b",
-    title: "Using Docker & NGINX to Build a Suite of Microservices",
-    slug: "docker-nginx-microservices",
-    author: "Muhammad Sharjeel",
-    date: "2025-04-13",
-    excerpt:
+    "id": "2183cfd0-343f-4420-8fcc-a6a0dc17c73b",
+    "title": "Using Docker & NGINX to Build a Suite of Microservices",
+    "slug": "docker-nginx-microservices",
+    "author": "Muhammad Sharjeel",
+    "date": "2025-04-13",
+    "excerpt":
       "Explore how to use Docker and NGINX to containerize and orchestrate a scalable microservices suite. Includes setup tips, architecture advice, and real-world tradeoffs.",
-    content: `
+    "content": `
     <br/>
     <h2>Why Microservices?</h2>
     <p>Modern applications are increasingly being built using a microservices architecture, where independent services communicate through APIs. This makes them more scalable, maintainable, and deployable. But managing those services locally and in production can be a nightmare without proper tooling.</p>
@@ -590,20 +590,20 @@ export const blogPosts: BlogPost[] = [
 
     <p>If you're building projects that need to grow modularly, learning this workflow early can save you countless headaches down the line.</p>
       `,
-    coverImage: "/blogs/docker-nginx-microservices.png",
-    categories: ["DevOps", "Software Development", "Tools"],
+    "coverImage": "/blogs/docker-nginx-microservices.png",
+    "categories": ["DevOps", "Software Development", "Tools"],
   },
 
   // Blog 6: Accessible Design Matters
   {
-    id: "170540d8-b7e0-49dd-8911-69757d17af47",
-    title: "What Is Accessible Design and Why It Matters",
-    slug: "what-is-accessible-design",
-    author: "Muhammad Sharjeel",
-    date: "2025-04-13",
-    excerpt:
+    "id": "170540d8-b7e0-49dd-8911-69757d17af47",
+    "title": "What Is Accessible Design and Why It Matters",
+    "slug": "what-is-accessible-design",
+    "author": "Muhammad Sharjeel",
+    "date": "2025-04-13",
+    "excerpt":
       "Accessibility isn’t a nice-to-have. It’s a necessity. Here's why accessible design matters — and how to get it right in your UI and frontend code.",
-    content: `
+    "content": `
   <br/>
     <h2>Defining Accessible Design</h2>
     <p>Accessible design refers to the practice of building digital interfaces that everyone can use — regardless of ability, device, or context. It includes everything from making sure your site works well with screen readers to ensuring users can navigate via keyboard or understand visuals with limited color perception.</p>
@@ -665,20 +665,20 @@ export const blogPosts: BlogPost[] = [
 
     <p>Start small — fix one accessibility issue at a time. Every improvement makes your app better, more inclusive, and more impactful.</p>
       `,
-    coverImage: "/blogs/what-is-accessible-design.png",
-    categories: ["Design", "Interface", "Inclusivity"],
+    "coverImage": "/blogs/what-is-accessible-design.png",
+    "categories": ["Design", "Interface", "Inclusivity"],
   },
 
   // Blog 7: Grid Systems in UI
   {
-    id: "7",
-    title: "Grid Systems: The Foundation of Great UI Design",
-    slug: "grid-system-ui-design",
-    author: "Muhammad Sharjeel",
-    date: "2025-04-13",
-    excerpt:
+    "id": "7",
+    "title": "Grid Systems: The Foundation of Great UI Design",
+    "slug": "grid-system-ui-design",
+    "author": "Muhammad Sharjeel",
+    "date": "2025-04-13",
+    "excerpt":
       "Want cleaner, more balanced layouts? A grid system brings structure, rhythm, and clarity to your UI — and Tailwind makes it easier than ever to implement.",
-    content: `
+    "content": `
     <br/>
     <h2>Understanding Grid Systems</h2>
     <p>At its core, a grid system is a layout structure that helps you organize content across a consistent visual framework. Whether you’re designing a landing page, dashboard, or blog layout, grids ensure your UI feels organized, balanced, and intentional.</p>
@@ -735,8 +735,8 @@ export const blogPosts: BlogPost[] = [
 
     <p>Start with structure, layer in creativity, and never underestimate the power of invisible rules guiding a beautiful layout.</p>
       `,
-    coverImage: "/blogs/grid-system-ui-design.jpg",
-    categories: ["Design", "Interface", "Best Practices"],
+    "coverImage": "/blogs/grid-system-ui-design.jpg",
+    "categories": ["Design", "Interface", "Best Practices"],
   },
 ]
 
