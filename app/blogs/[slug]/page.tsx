@@ -4,6 +4,7 @@ import BlogContent from "@/components/blog/blog-content"
 import RecentPostsSidebar from "@/components/blog/recent-posts-sidebar"
 import ShareButtons from "@/components/blog/share-buttons"
 import { getBlogBySlug, getRecentBlogs } from "@/data/blog-data"
+export const dynamic = 'force-static';
 
 interface BlogDetailPageProps {
     params: {
@@ -14,16 +15,14 @@ interface BlogDetailPageProps {
 export async function generateMetadata(
     { params }: { params: { slug: string } }
 ): Promise<Metadata> {
-    const blog = getBlogBySlug(params.slug)
-
+    const blog = getBlogBySlug(params.slug);
     if (!blog) {
-        return { title: "Blog Post Not Found" }
+        return { title: "Blog Post Not Found" };
     }
 
-    const fullImage =
-        blog.coverImage?.startsWith("http")
-            ? blog.coverImage
-            : `https://www.sharjeelafzaal.com${blog.coverImage || "/opengraph-image.png"}`
+    const fullImage = blog.coverImage?.startsWith("http")
+        ? blog.coverImage
+        : `https://www.sharjeelafzaal.com${blog.coverImage || "/opengraph-image.png"}`;
 
     return {
         title: `${blog.title} | Blog Post`,
@@ -38,6 +37,7 @@ export async function generateMetadata(
                     url: fullImage,
                     width: 1200,
                     height: 630,
+                    alt: blog.title, // Added alt text
                 },
             ],
             locale: "en_US",
@@ -52,8 +52,55 @@ export async function generateMetadata(
             description: blog.excerpt,
             images: [fullImage],
         },
-    }
+        alternates: {
+            canonical: `https://www.sharjeelafzaal.com/blogs/${blog.slug}`,
+        },
+    };
 }
+
+// export async function generateMetadata(
+//     { params }: { params: { slug: string } }
+// ): Promise<Metadata> {
+//     const blog = getBlogBySlug(params.slug)
+
+//     if (!blog) {
+//         return { title: "Blog Post Not Found" }
+//     }
+
+//     const fullImage =
+//         blog.coverImage?.startsWith("http")
+//             ? blog.coverImage
+//             : `https://www.sharjeelafzaal.com${blog.coverImage || "/opengraph-image.png"}`
+
+//     return {
+//         title: `${blog.title} | Blog Post`,
+//         description: blog.excerpt,
+//         openGraph: {
+//             title: `${blog.title} | Blog Post`,
+//             description: blog.excerpt,
+//             url: `https://www.sharjeelafzaal.com/blogs/${blog.slug}`,
+//             siteName: "Muhammad Sharjeel - Blogs",
+//             images: [
+//                 {
+//                     url: fullImage,
+//                     width: 1200,
+//                     height: 630,
+//                 },
+//             ],
+//             locale: "en_US",
+//             type: "article",
+//             publishedTime: blog.date,
+//             authors: [blog.author],
+//             tags: blog.categories,
+//         },
+//         twitter: {
+//             card: "summary_large_image",
+//             title: `${blog.title} | Blog Post`,
+//             description: blog.excerpt,
+//             images: [fullImage],
+//         },
+//     }
+// }
 
 export default function BlogDetailPage({ params }: BlogDetailPageProps) {
     const blog = getBlogBySlug(params.slug)
