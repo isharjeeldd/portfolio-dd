@@ -19,7 +19,7 @@ export async function middleware(request: NextRequest) {
             // Get the image URL
             const imageUrl = blog.coverImage?.startsWith("http")
                 ? blog.coverImage
-                : `https://www.sharjeelafzaal.com${blog.coverImage || "/blogs/nextjs.png"}`
+                : `https://www.sharjeelafzaal.com${blog.coverImage || "/blogs/opengraph-image.png"}`
 
 
             // Add OpenGraph headers

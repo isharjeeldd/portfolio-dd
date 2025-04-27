@@ -131,7 +131,7 @@ export const blogPosts: BlogPost[] = [
       <p>Great developers aren't the ones who never face bugs. They're the ones who <strong>debug efficiently</strong> and <strong>learn faster</strong> from every problem.</p>
       <p>Master these debugging fundamentals now, and you'll separate yourself from the average developers much faster!</p>
     `,
-    "coverImage": "/blogs/debugging-tips.png",
+    "coverImage": "/blogs/debugging-tips-frontend-developers-react-nextjs.png",
     "categories": ["Frontend Development", "React", "Next.js", "Debugging"]
   },
 
@@ -196,7 +196,7 @@ export const blogPosts: BlogPost[] = [
       <p>This project is licensed under the GNU GPL, which means you're free to fork, modify, and share. Just make sure your derivative works follow the same license terms.</p>
       <p><em>If you find something valuable in this portfolio, feel free to star, fork, or reach out — I’d love to see how you build on it.</em></p>
     `,
-    coverImage: "/blogs/portfolio-blog.png",
+    coverImage: "/blogs/launching-my-new-portfolio-website.png",
     categories: ["Design", "Frameworks", "Software Development", "Tools"],
   },
   // Blog 2: Getting Started with Next.js
@@ -341,7 +341,7 @@ export const blogPosts: BlogPost[] = [
         <li><a href="https://tailwindcss.com/docs" target="_blank">Tailwind CSS</a></li>
       </ul>
       `,
-    coverImage: "/blogs/nextjs.png",
+    coverImage: "/blogs/getting-started-with-nextjs.png",
     categories: ["Frameworks", "Software Development", "Tools"],
   },
 
@@ -400,7 +400,7 @@ export const blogPosts: BlogPost[] = [
 
     <p>Embrace the tools. Learn their limits. And then build beyond them.</p>
       `,
-    coverImage: "/blogs/ai-dev.png",
+    coverImage: "/blogs/ai-developer-threat-or-stunt.png",
     categories: ["AI", "Software Development", "Opinion"],
   },
 
@@ -471,7 +471,7 @@ export const blogPosts: BlogPost[] = [
 
     <p>If you're not experimenting with these tools yet, you're missing out on a productivity boost — not because AI is perfect, but because it's good enough to help you move faster without losing control.</p>
       `,
-    coverImage: "/blogs/generative-ai.jpg",
+    coverImage: "/blogs/using-generative-ai-to-speed-up.jpg",
     categories: ["AI", "Tools", "Productivity"],
   },
 
@@ -590,7 +590,7 @@ export const blogPosts: BlogPost[] = [
 
     <p>If you're building projects that need to grow modularly, learning this workflow early can save you countless headaches down the line.</p>
       `,
-    coverImage: "/blogs/nginx-docker.png",
+    coverImage: "/blogs/docker-nginx-microservices.png",
     categories: ["DevOps", "Software Development", "Tools"],
   },
 
@@ -665,7 +665,7 @@ export const blogPosts: BlogPost[] = [
 
     <p>Start small — fix one accessibility issue at a time. Every improvement makes your app better, more inclusive, and more impactful.</p>
       `,
-    coverImage: "/blogs/accessibility-design.png",
+    coverImage: "/blogs/what-is-accessible-design.png",
     categories: ["Design", "Interface", "Inclusivity"],
   },
 
@@ -735,7 +735,7 @@ export const blogPosts: BlogPost[] = [
 
     <p>Start with structure, layer in creativity, and never underestimate the power of invisible rules guiding a beautiful layout.</p>
       `,
-    coverImage: "/blogs/grid-systems.jpg",
+    coverImage: "/blogs/grid-system-ui-design.jpg",
     categories: ["Design", "Interface", "Best Practices"],
   },
 ]
