@@ -16,10 +16,10 @@ export async function middleware(request: NextRequest) {
             // Clone the response
             const response = NextResponse.next()
 
-            // Get the image URL
             const imageUrl = blog.coverImage?.startsWith("http")
                 ? blog.coverImage
-                : `https://www.sharjeelafzaal.com${blog.coverImage || "/blogs/opengraph-image.png"}`
+                : `https://www.sharjeelafzaal.com/blogs/${blog.slug}.png`
+            // : `https://www.sharjeelafzaal.com${blog.coverImage || "/blogs/opengraph-image.png"}`
 
 
             // Add OpenGraph headers

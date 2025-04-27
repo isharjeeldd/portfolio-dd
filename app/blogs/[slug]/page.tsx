@@ -21,13 +21,11 @@ export async function generateMetadata(
     }
 
     // Be very explicit about the image path
-    let fullImage = '/opengraph-image.png' // default fallback
 
-    if (blog.coverImage) {
-        fullImage = blog.coverImage.startsWith("http")
-            ? blog.coverImage
-            : `/blogs/${blog.slug}.png` // Be specific about the expected filename
-    }
+    let fullImage = blog.coverImage.startsWith("http")
+        ? blog.coverImage
+        : `/blogs/${blog.slug}.png` // Be specific about the expected filename
+
 
     return {
         title: `${blog.title} | Blog Post`,
