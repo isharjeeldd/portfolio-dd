@@ -3,7 +3,8 @@ import { notFound } from "next/navigation"
 import BlogContent from "@/components/blog/blog-content"
 import RecentPostsSidebar from "@/components/blog/recent-posts-sidebar"
 import ShareButtons from "@/components/blog/share-buttons"
-import { getBlogBySlug, getRecentBlogs } from "@/data/blog-data"
+import { getAllBlogs, getBlogBySlug, getRecentBlogs } from "@/data/blog-data"
+
 export const dynamic = 'force-static';
 
 interface BlogDetailPageProps {
@@ -12,20 +13,27 @@ interface BlogDetailPageProps {
     }
 }
 
+// This function will generate all possible static paths at build time
+export async function generateStaticParams() {
+    // Get all blogs from your data source
+    const blogs = await getAllBlogs()
+
+    // Return all the slugs as params objects
+    return blogs.map(blog => ({
+        slug: blog.slug,
+    }))
+}
+
 export async function generateMetadata(
-    { params }: { params: { slug: string } }
+    { params }: BlogDetailPageProps
 ): Promise<Metadata> {
-    const blog = getBlogBySlug(params.slug)
+    const blog = await getBlogBySlug(params.slug)
     if (!blog) {
         return { title: "Blog Post Not Found" }
     }
 
-    // Be very explicit about the image path
-
-    let fullImage = blog.coverImage.startsWith("http")
-        ? blog.coverImage
-        : `/blogs/${blog.slug}.png` // Be specific about the expected filename
-
+    // Construct the image path
+    const fullImage = `https://www.sharjeelafzaal.com${blog.coverImage}`
 
     return {
         title: `${blog.title} | Blog Post`,
@@ -37,7 +45,7 @@ export async function generateMetadata(
             siteName: "Muhammad Sharjeel - Blogs",
             images: [
                 {
-                    url: `https://www.sharjeelafzaal.com${fullImage}`,
+                    url: fullImage,
                     width: 1200,
                     height: 630,
                     alt: blog.title,
@@ -53,19 +61,18 @@ export async function generateMetadata(
             card: "summary_large_image",
             title: `${blog.title} | Blog Post`,
             description: blog.excerpt,
-            images: [`https://www.sharjeelafzaal.com${fullImage}`],
+            images: [fullImage],
         },
     }
 }
 
-export default function BlogDetailPage({ params }: BlogDetailPageProps) {
-    const blog = getBlogBySlug(params.slug)
-
+export default async function BlogDetailPage({ params }: BlogDetailPageProps) {
+    const blog = await getBlogBySlug(params.slug)
     if (!blog) {
         notFound()
     }
 
-    const recentPosts = getRecentBlogs(4, blog.id)
+    const recentPosts = await getRecentBlogs(4, blog.id)
 
     return (
         <>
@@ -76,7 +83,7 @@ export default function BlogDetailPage({ params }: BlogDetailPageProps) {
                         <article>
                             <h1 className="text-3xl sm:text-4xl font-bold mb-4">{blog.title}</h1>
                             <p className="text-muted-foreground mb-6">
-                                By {blog.author} | Published on {blog.date}
+                                By {blog.author} | Published on {new Date(blog.date.toString()).toDateString()}
                             </p>
                             <BlogContent blog={blog} />
                         </article>

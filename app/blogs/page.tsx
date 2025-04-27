@@ -60,7 +60,7 @@ export default async function BlogsPage({
   // Await the searchParams if necessary (though in this case, it's not needed)
   const page = typeof searchParams.page === "string" ? Number.parseInt(searchParams.page, 10) : 1
   const blogsPerPage = 12
-  const allBlogs = getAllBlogs()
+  const allBlogs = await getAllBlogs()
   const totalPages = Math.ceil(allBlogs.length / blogsPerPage)
 
   const startIndex = (page - 1) * blogsPerPage

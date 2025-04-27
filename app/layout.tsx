@@ -5,7 +5,6 @@ import './globals.css'
 import Layout from '@/components/layout'
 import { TooltipProvider } from '@/components/ui/tooltip'
 import { Toaster } from '@/components/ui/toaster'
-import { headers } from 'next/headers'
 
 const poppins = Poppins({
   subsets: ['latin'],
@@ -96,22 +95,9 @@ export default async function RootLayout({
   children: React.ReactNode
 }) {
 
-  const headersList = await headers()
-  const ogTitle = headersList.get('x-og-title')
-  const ogDescription = headersList.get('x-og-description')
-  const ogImage = headersList.get('x-og-image')
-
   return (
     <html lang="en" className={`${poppins.variable} dark`} suppressHydrationWarning>
       <head>
-        {ogTitle && <meta property="og:title" content={ogTitle} />}
-        {ogDescription && <meta property="og:description" content={ogDescription} />}
-        {ogImage && <meta property="og:image" content={ogImage} />}
-        {ogImage && <meta property="og:image:width" content="1200" />}
-        {ogImage && <meta property="og:image:height" content="630" />}
-        {ogImage && <meta name="twitter:image" content={ogImage} />}
-        {ogTitle && <meta name="twitter:title" content={ogTitle} />}
-        {ogDescription && <meta name="twitter:description" content={ogDescription} />}
         <meta name="twitter:card" content="summary_large_image" />
       </head>
       <body

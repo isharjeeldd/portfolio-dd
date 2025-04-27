@@ -740,14 +740,14 @@ export const blogPosts: BlogPost[] = [
   },
 ]
 
-export function getAllBlogs(): BlogPost[] {
+export async function getAllBlogs(): Promise<BlogPost[]> {
   return blogPosts
 }
 
-export function getRecentBlogs(count = 3, excludeId?: string): BlogPost[] {
+export async function getRecentBlogs(count = 3, excludeId?: string): Promise<BlogPost[]> {
   return blogPosts.filter((blog) => !excludeId || blog.id !== excludeId).slice(0, count)
 }
 
-export function getBlogBySlug(slug: string): BlogPost | undefined {
+export async function getBlogBySlug(slug: string): Promise<BlogPost | undefined> {
   return blogPosts.find((blog) => blog.slug === slug)
 }
