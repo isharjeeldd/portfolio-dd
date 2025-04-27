@@ -67,27 +67,10 @@ export default function BlogDetailPage({ params }: BlogDetailPageProps) {
         notFound()
     }
 
-    const imageUrl = blog.coverImage?.startsWith("http")
-        ? blog.coverImage
-        : `https://www.sharjeelafzaal.com${blog.coverImage || "/opengraph-image.png"}`
-
     const recentPosts = getRecentBlogs(4, blog.id)
 
     return (
         <>
-            {/* <head>
-                <meta property="og:title" content={`${blog.title} | Blog Post`} />
-                <meta property="og:description" content={blog.excerpt} />
-                <meta property="og:image" content={imageUrl} />
-                <meta property="og:image:width" content="1200" />
-                <meta property="og:image:height" content="630" />
-                <meta property="og:url" content={`https://www.sharjeelafzaal.com/blogs/${blog.slug}`} />
-                <meta property="og:type" content="article" />
-                <meta name="twitter:card" content="summary_large_image" />
-                <meta name="twitter:title" content={`${blog.title} | Blog Post`} />
-                <meta name="twitter:description" content={blog.excerpt} />
-                <meta name="twitter:image" content={imageUrl} />
-            </head> */}
             <ShareButtons title={blog.title} slug={blog.slug} />
             <main className="container max-w-7xl mx-auto px-4 py-24 mt-28 md:px-0">
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">

@@ -104,7 +104,7 @@ export default async function RootLayout({
   return (
     <html lang="en" className={`${poppins.variable} dark`} suppressHydrationWarning>
       <head>
-        {ogTitle && <meta property="og:title" content={ogTitle} />}
+        {/* {ogTitle && <meta property="og:title" content={ogTitle} />}
         {ogDescription && <meta property="og:description" content={ogDescription} />}
         {ogImage && <meta property="og:image" content={ogImage} />}
         {ogImage && <meta property="og:image:width" content="1200" />}
@@ -112,7 +112,11 @@ export default async function RootLayout({
         {ogImage && <meta name="twitter:image" content={ogImage} />}
         {ogTitle && <meta name="twitter:title" content={ogTitle} />}
         {ogDescription && <meta name="twitter:description" content={ogDescription} />}
-        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:card" content="summary_large_image" /> */}
+        <meta property="og:image" content="https://www.sharjeelafzaal.com/opengraph-image.png" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta name="twitter:image" content="https://www.sharjeelafzaal.com/twitter-image.png" />
       </head>
       <body
         className={`${poppins.className} font-sans antialiased min-h-screen bg-background text-foreground flex flex-col`}
