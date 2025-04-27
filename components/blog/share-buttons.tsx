@@ -63,7 +63,7 @@ export default function ShareButtons({ title, slug }: ShareButtonsProps) {
             fixed z-50
             flex gap-3
             sm:left-6 sm:top-1/2 sm:-translate-y-1/2 sm:flex-col
-            left-0 bottom-0 w-full justify-center bg-background/90 backdrop-blur-sm py-3 sm:py-0 sm:w-auto sm:bg-transparent
+            left-0 bottom-0 w-full justify-center md:backdrop-blur-none bg-background/90 backdrop-blur-sm py-3 sm:py-0 sm:w-auto sm:bg-transparent
           "
             variants={container}
             initial="hidden"
