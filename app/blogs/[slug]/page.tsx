@@ -60,50 +60,6 @@ export async function generateMetadata(
     }
 }
 
-// export async function generateMetadata(
-//     { params }: { params: { slug: string } }
-// ): Promise<Metadata> {
-//     const blog = getBlogBySlug(params.slug)
-
-//     if (!blog) {
-//         return { title: "Blog Post Not Found" }
-//     }
-
-//     const fullImage =
-//         blog.coverImage?.startsWith("http")
-//             ? blog.coverImage
-//             : `https://www.sharjeelafzaal.com${blog.coverImage || "/opengraph-image.png"}`
-
-//     return {
-//         title: `${blog.title} | Blog Post`,
-//         description: blog.excerpt,
-//         openGraph: {
-//             title: `${blog.title} | Blog Post`,
-//             description: blog.excerpt,
-//             url: `https://www.sharjeelafzaal.com/blogs/${blog.slug}`,
-//             siteName: "Muhammad Sharjeel - Blogs",
-//             images: [
-//                 {
-//                     url: fullImage,
-//                     width: 1200,
-//                     height: 630,
-//                 },
-//             ],
-//             locale: "en_US",
-//             type: "article",
-//             publishedTime: blog.date,
-//             authors: [blog.author],
-//             tags: blog.categories,
-//         },
-//         twitter: {
-//             card: "summary_large_image",
-//             title: `${blog.title} | Blog Post`,
-//             description: blog.excerpt,
-//             images: [fullImage],
-//         },
-//     }
-// }
-
 export default function BlogDetailPage({ params }: BlogDetailPageProps) {
     const blog = getBlogBySlug(params.slug)
 
@@ -119,7 +75,7 @@ export default function BlogDetailPage({ params }: BlogDetailPageProps) {
 
     return (
         <>
-            <head>
+            {/* <head>
                 <meta property="og:title" content={`${blog.title} | Blog Post`} />
                 <meta property="og:description" content={blog.excerpt} />
                 <meta property="og:image" content={imageUrl} />
@@ -131,7 +87,7 @@ export default function BlogDetailPage({ params }: BlogDetailPageProps) {
                 <meta name="twitter:title" content={`${blog.title} | Blog Post`} />
                 <meta name="twitter:description" content={blog.excerpt} />
                 <meta name="twitter:image" content={imageUrl} />
-            </head>
+            </head> */}
             <ShareButtons title={blog.title} slug={blog.slug} />
             <main className="container max-w-7xl mx-auto px-4 py-24 mt-28 md:px-0">
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">
