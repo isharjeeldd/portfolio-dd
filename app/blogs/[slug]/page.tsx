@@ -20,10 +20,6 @@ export async function generateMetadata(
         return { title: "Blog Post Not Found" };
     }
 
-    const fullImage = blog.coverImage?.startsWith("http")
-        ? blog.coverImage
-        : `https://www.sharjeelafzaal.com${blog.coverImage || "/opengraph-image.png"}`;
-
     return {
         title: `${blog.title} | Blog Post`,
         description: blog.excerpt,
@@ -32,14 +28,7 @@ export async function generateMetadata(
             description: blog.excerpt,
             url: `https://www.sharjeelafzaal.com/blogs/${blog.slug}`,
             siteName: "Muhammad Sharjeel - Blogs",
-            images: [
-                {
-                    url: fullImage,
-                    width: 1200,
-                    height: 630,
-                    alt: blog.title, // Added alt text
-                },
-            ],
+            // Images are now handled by opengraph-image.tsx
             locale: "en_US",
             type: "article",
             publishedTime: blog.date,
@@ -50,7 +39,7 @@ export async function generateMetadata(
             card: "summary_large_image",
             title: `${blog.title} | Blog Post`,
             description: blog.excerpt,
-            images: [fullImage],
+            // Images are now handled by twitter-image.tsx
         },
         alternates: {
             canonical: `https://www.sharjeelafzaal.com/blogs/${blog.slug}`,
