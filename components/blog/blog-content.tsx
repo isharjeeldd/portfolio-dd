@@ -27,7 +27,7 @@ export default function BlogContent({ blog }: BlogContentProps) {
                     src={blog.coverImage || "/placeholder.svg?height=600&width=1200"}
                     alt={blog.title}
                     fill
-                    className="object-cover rounded-lg"
+                    className="object-cover object-top rounded-lg"
                     priority
                 />
             </motion.div>
